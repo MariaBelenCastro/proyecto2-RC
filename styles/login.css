@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.formularioContenedor {
+    display: flex;
+    margin: 10px;
+    height: 500px;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: -1px 4px 10px 1px #000000;
+    transition: all 1s ease;
+}
+
+.contenedorInformacion{
+    display:flex;
+    width: 40%;
+    align-items: center;
+    text-align: center;
+    background-color: #000000;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.informacion{
+    width: 100%;
+    padding: 30px;
+    color: #333;
+}
+
+.informacion h2{
+    font-size: 32px;
+}
+
+.informacion p{
+    margin: 15px 0;
+    color: #555;
+}
+
+.informacion input{
+    border-radius: 25px;
+    border: solid 2px;
+    padding: 10px 20px;
+    box-shadow: -1px 4px 10px 1px #000000;
+}
+
+.formularioInformacion {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: solid thin red;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.formularioInformacionHijo{
+    padding: 0 30px;
+}
+
+.formularioInformacionHijo h2{
+    color: #333;
+    font-size: 32px;
+}
+
+.formularioInformacionHijo h2{
+    color: #555;
+}
+
+.iconos {
+    margin: 15px 0;
+}
+
+.iconos i{
+    cursor: pointer;
+    border: solid thin #666;
+    border-radius: 50%;
+    padding: 15px;
+    color: #555;
+    transition: background-color 0.3s ease;
+}
+
+.iconos i:hover{
+    background-color: #c7eef3;
+    color: #fff;
+}
