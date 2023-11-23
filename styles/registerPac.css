@@ -118,6 +118,11 @@ form label i{
     padding-right: 0;
 }
 
+.hide {
+    position: absolute;
+    transform: translateY(-300%);
+}
+
 
 @media (max-width: 768px) {
     html {
@@ -155,5 +160,5 @@ form label i{
         border-bottom-left-radius: 20px;
         border-top-right-radius: 0;
     }
-
 }
+
