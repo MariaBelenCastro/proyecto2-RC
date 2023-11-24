@@ -5,9 +5,17 @@ body {
     height: 100vh;
 }
 
+.navC{
+    background-color:  rgb(90, 131, 148);;
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
 .formularioContenedor {
     display: flex;
-    margin: 10px;
+    margin-top: 50px;
     height: 500px;
     max-width: 900px;
     border-radius: 15px;
@@ -123,6 +131,28 @@ form label i{
     transform: translateY(-300%);
 }
 
+footer{
+    position: relative;
+    bottom: 0;
+}
+
+.bgC{
+    background-color:  rgb(90, 131, 148);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.subtitulosC{
+    font-weight: 400;
+    font-size: medium;
+}
+
+.headerFondo{
+    background-image: url("./assets/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 @media (max-width: 768px) {
     html {
