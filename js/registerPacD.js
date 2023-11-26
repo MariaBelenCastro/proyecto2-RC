@@ -18,6 +18,9 @@ const form = document.querySelector(".form");
 
 alertify.set('notifier','position', 'top-center')
 
+let arrayLS = [];
+
+
 function registrarse(event){
     event.preventDefault()
     const nombre = document.getElementById('nombre').value;
@@ -25,9 +28,7 @@ function registrarse(event){
     const correo = document.getElementById('email').value
     const contrasenia = document.getElementById('password').value
     const controlContrasenia = document.getElementById('controlPassword').value
-    // const controlContrasenia = document.getElementById('controlContrasenia').value
-    if (!nombre.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]{8,18}$/)){ 
-        // alert("El nombre ingresado no es válido, debe contener entre 8 y 16 caracteres alfanuméricos")
+    if (!nombre.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]{8,18}$/)){
         alertify.error("El nombre ingresado no es válido, debe contener entre 8 y 18 caracteres alfanuméricos");
         return;
     };
@@ -44,23 +45,45 @@ function registrarse(event){
         return
     };
     if (contrasenia===controlContrasenia){
-    }else{ 
+    }else{
         alertify.error("Las contraseñas no coinciden")
         return
     };
-    const nuevoUsuario = {
-      nombre: nombre,
-      dni: dni,
-      email: correo,
-      password: contrasenia,
-      isAdmin: false
+    const valorLS = localStorage.getItem("paciente");
+    arrayLS = [];
+
+    if (valorLS) {
+        arrayLS = JSON.parse(valorLS);
     }
+
+    const nuevoPaciente = {
+        nombre: nombre,
+        dni: dni,
+        email: correo,
+        password: contrasenia,
+        isAdmin: false
+    };
+
+    // Agregar el nuevo usuario al array
+    arrayLS.push(nuevoPaciente);
+
+    // Guardar el array actualizado en el localStorage
+    localStorage.setItem("paciente", JSON.stringify(arrayLS));
+
+    console.log(arrayLS);
 }
+
+// const resetearValores = (() => {
+//     nombre.
+// }) 
+
 
 function mostrarContraseña(passwordId, eyeId) {
     const passwordInput = document.getElementById(passwordId);
     const eyeIcon = document.getElementById(eyeId).querySelector('i');
     passwordInput.type = (passwordInput.type === 'password') ? 'text' : 'password';
-    const iconClass = (passwordInput.type === 'password') ? 'fa-eye' : 'fa-eye-slash';
+    const iconClass = (passwordInput.type === 'password') ? 'fa-eye-slash' : 'fa-eye';
     eyeIcon.className = `fas ${iconClass}`;
 }
+
+
