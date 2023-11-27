@@ -1,0 +1,63 @@
+.navC{
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    position:sticky;
+    top: 0;
+    z-index: 1;
+    
+    /*
+    background-color: #A0E9FF;
+    */
+}
+
+body{
+    background-image: url(/assets/fondobody.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+.container-fill{
+    background-color: #A0E9FF;
+}
+.overlayC{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.575);
+}
+
+.textoImagenC{
+    color: rgb(255, 255, 255);
+}
+
+
+.equipoM{
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    padding-block: 2rem;
+    border: 2px solid white;
+}
+
+
+.imagen:hover{
+    background-color:rgba(3, 0, 0, 0.4); 
+    backdrop-filter: blur(5px);
+}
+
+.carouselImagenC {
+    object-fit: cover;
+    height: 80vh;
+}
+
+
+.textSliderC{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.bgFooterC{
+    background-color: rgb(1, 1, 54);
+}
