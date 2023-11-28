@@ -19,17 +19,12 @@ alertify.set("notifier", "position", "top-center")
 
 let arrayLS = [];
 
-let nombre, apellido, dni, correo, contrasenia, controlContrasenia;
+let nombre, apellido, dni, correo, contrasenia, controlContrasenia, matricula;
 
-let pacientePendiente = JSON.parse(localStorage.getItem("pacientePendiente")) || [];
-let dnisRegistroPendiente = new Set(pacientePendiente.map(p => p.dni));
-let correoRegistroPendiente = new Set(pacientePendiente.map(p => p.email));
-let contraseniaRegistroPendiente = new Set(pacientePendiente.map(p => p.password))
-
-let paciente = JSON.parse(localStorage.getItem("paciente")) || [];
-let dnisRegistro = new Set(paciente.map(p => p.dni));
-let correoRegistro = new Set(paciente.map(p => p.email));
-let contraseniaRegistro = new Set(paciente.map(p => p.password))
+let medico = JSON.parse(localStorage.getItem("medico")) || [];
+let dnisRegistro = new Set(medico.map(m => m.dni));
+let correoRegistro = new Set(medico.map(m => m.email));
+let contraseniaRegistro = new Set(medico.map(m => m.password))
 
 function registrarse(event) {
     event.preventDefault();
@@ -37,28 +32,28 @@ function registrarse(event) {
         // Las validaciones fallaron, no continuar con el registro
         return;
     }
-    const valorLS = localStorage.getItem("pacientePendiente");
+    const valorLS = localStorage.getItem("medico");
     arrayLS = [];
     if (valorLS) {
         arrayLS = JSON.parse(valorLS);
     }
-    const nuevoPaciente = {
+    const nuevoMedico = {
         nombre: nombre,
         apellido: apellido,
         dni: dni,
+        matricula: matricula,
         email: correo,
         password: contrasenia,
-        isAdmin: false
     };
 
     // Agregar el nuevo usuario al array
-    arrayLS.push(nuevoPaciente);
+    arrayLS.push(nuevoMedico);
 
     // Guardar el array actualizado en el localStorage
-    localStorage.setItem("pacientePendiente", JSON.stringify(arrayLS));
+    localStorage.setItem("medico", JSON.stringify(arrayLS));
 
     console.log(arrayLS);
-    alertify.warning(`Su registro se está procesando. La aprobación será enviada a ${correo}`)
+    alertify.success("Su registro se completó correctamente")
     form.reset();
 
     // dnisRegistro.add(dni);
@@ -76,9 +71,10 @@ function mostrarContraseña(passwordId, eyeId) {
 
 const recibirInputs = () => {
     nombre = document.getElementById("nombre").value;
-    apellido = document.getElementById("apellido").value;
+    apellido = document.getElementById("nombre").value;
     dni = document.getElementById("dni").value;
     correo = document.getElementById("email").value;
+    matricula = document.getElementById("matricula").value;
     contrasenia = document.getElementById("password").value;
     controlContrasenia = document.getElementById("controlPassword").value;
     if (dnisRegistro.has(dni)) {
@@ -90,15 +86,19 @@ const recibirInputs = () => {
         return false;
     }
     if (!nombre.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ"°]{4,12}$/)) {
-        alertify.error("El nombre ingresado no es válido, debe contener entre 8 y 12 caracteres alfanuméricos");
+        alertify.error("El nombre ingresado no es válido, debe contener entre 4 y 18 caracteres alfanuméricos");
         return false;
     };
-    if (!apellido.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ"°]{4,12}$/)) {
+    if (!nombre.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ"°]{4,12}$/)) {
         alertify.error("El apellido ingresado no es válido, debe contener entre 4 y 12 caracteres alfanuméricos");
         return false;
     };
     if (!dni.match(/^\d{7,8}$/)) {
         alertify.error("El DNI ingresado no es válido, debe contener entre 7 y 8 dígitos numéricos");
+        return false;
+    }
+    if (!matricula.match(/^\d{4,12}$/)) {
+        alertify.error("La matrícular ingresada no es válida, debe contener entre 4 y 12 dígitos numéricos");
         return false;
     }
     if (!correo.match(/([a-z]\w+@[a-z]+\.[a-z]{2,5})/)) {
@@ -123,18 +123,11 @@ const iniciarSesion = (event) => {
     event.preventDefault();
     const emailLog = document.getElementById("email2").value;
     const passwordLog = document.getElementById("password2").value;
-    const user = paciente.find((item) => item.email === emailLog && item.password === passwordLog);
+    const user = medico.find((item) => item.email === emailLog && item.password === passwordLog);
     if (user) {
-        window.location.href = "medico.html";
-        if(user.isAdmin) {
-            window.location.href='administracion.html'
-        }
-        else{
-            window.location.href="http://127.0.0.1:5501/index.html"
-        }
+        window.location.href = "http://127.0.0.1:5501/medico.html";
     } else {
         // Usuario no encontrado, mostrar mensaje de error
         alertify.error("El usuario o la contraseña ingresada no son correctos");
     }
 };
-

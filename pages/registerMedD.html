@@ -55,29 +55,37 @@
         <div class="contenedorInformacion">
             <div class="informacion">
                 <h3>Bienvenido</h3>
-                <p>Registrate para solicitar turnos en línea y acceder a servicios médicos de calidad.</p>
+                <p>Inicia sesión para gestionar tus consultas, actualizar tu información profesional.</p>
                 <input class="btn btn-light btn-sm" type="button" value="Iniciar Sesion" id="sign-up">
-                <h5>¿Sos médico?</h5>
-                <p>Sé parte de nuestro equipo conformado por una red comprometida con la excelencia médica.</p>
-                <input class="btn btn-light btn-sm" type="button" value="Unirse como Médico" id="join-as-doctor">
+                <h5>¿Sos paciente?</h5>
+                <p>Registrate para solicitar turnos en línea y acceder a servicios médicos de calidad.</p>
+                <a href="/pages/registerPacD.html"><input class="btn btn-light btn-sm" type="button" value="Unirse como paciente" id="join-as-doctor"></a>
             </div>
         </div>
         <div class="formularioInformacion">
             <div class="formularioInformacionHijo">
-                <h2>Asociate como médico</h2>
+                <h4>Registro médico</h4>
                 <div class="iconos">
-                    <i class='bx bxl-google g'></i>
-                    <i class='bx bxl-facebook-circle f' ></i>
+                    <a href="./error404.html"><i class='bx bxl-google g'></i></a>
+                    <a href="./error404.html"><i class='bx bxl-facebook-circle f' ></i></a>
                 </div>
                 <p>También puedes registrarte usando otras cuentas</p>
                 <form class="form">
                     <label>
                         <i class='bx bxs-user-pin'></i>
-                        <input type="text" placeholder="Apellido y nombre" required id="nombre">
+                        <input type="text" placeholder="Nombre" required id="nombre">
+                    </label>
+                    <label>
+                        <i class='bx bxs-user-pin'></i>
+                        <input type="text" placeholder="Apellido" required id="apellido">
                     </label>
                     <label>
                         <i class='bx bxs-id-card'></i>
                         <input type="text" placeholder="DNI" pattern="\d{7,8}" required id="dni">
+                    </label>
+                    <label>
+                        <i class='bx bxs-id-card'></i>
+                        <input type="text" placeholder="Matricula" pattern="\d{7,8}" required id="matricula">
                     </label>
                     <label>
                         <i class='bx bxl-gmail' ></i>
@@ -87,18 +95,18 @@
                         <i class='bx bx-lock-alt'></i>  
                         <input type="password" placeholder="Contraseña" required id="password" autocomplete="new-password">
                         <p id="eye" class="eye" onclick="mostrarContraseña('password', 'eye')">
-                            <i class="fas fa-eye-slash"></i>
+                            <i class="fa-solid fa-eye-slash"></i>
                         </p>
                     </label>
                     <label>
                         <i class='bx bx-lock-alt' ></i>
                         <input type="password" placeholder="Repita su contraseña" required id="controlPassword" autocomplete="new-password">
                         <p id="eye2" class="eye" onclick="mostrarContraseña('controlPassword', 'eye2')">
-                            <i class="fas fa-eye-slash"></i>
+                            <i class="fa-solid fa-eye-slash"></i>
                         </p>
                     </label>
                     <div>
-                        <a href="" class="sinContraseña">
+                        <a href="./error404.js" class="sinContraseña">
                             <p>¿Olvidaste tu contraseña?</p>
                         </a>
                     </div>
@@ -108,49 +116,45 @@
         </div>
     </div>
 
-
-
-
     <div class="formularioContenedor login hide">
         <div class="contenedorInformacion">
             <div class="informacion">
                 <h3>Bienvenido</h3>
-                <p>Regístrese y disfrute de estas ventajas</p>
+                <p>Registrate para solicitar turnos en línea y acceder a servicios médicos de calidad.</p>
                 <input class="btn btn-light btn-sm" type="button" value="Registrarse" id="sign-in">
             </div>
         </div>
-
-
-    <div class="formularioInformacion">
-        <div class="formularioInformacionHijo">
-            <h2>Iniciar Sesión</h2>
-            <div class="iconos">
-                <i class='bx bxl-google g'></i>
-                <i class='bx bxl-facebook-circle f' ></i>
-            </div>
-            <p>Iniciá sesión con una cuenta</p>
-            <form class="form2">
-                <label>
-                    <i class='bx bxl-gmail' ></i>
-                    <input type="email" placeholder="Correo Electrónico" id="email2" required autocomplete="username">
-                </label>
-                <label>
-                    <i class='bx bx-lock-alt' ></i>
-                    <input type="password" placeholder="Contraseña" id="password2" autocomplete="current-password">
-                    <p id="eye3" class="eye" onclick="mostrarContraseña('password2', 'eye3')">
-                        <i class="fas fa-eye"></i>
-                    </p>
-                </label>
-                <div>
-                    <a href="" class="sinContraseña">
-                        <p>¿Olvidaste tu contraseña?</p>
-                    </a>
+        <div class="formularioInformacion">
+            <div class="formularioInformacionHijo">
+                <h2>Iniciar Sesión</h2>
+                <div class="iconos">
+                    <i class='bx bxl-google g'></i>
+                    <i class='bx bxl-facebook-circle f' ></i>
                 </div>
-                <button type="button" class= "btn btn-outline-info btn-sm">Iniciar Sesion</button>
-            </form>
+                <p>Iniciá sesión con una cuenta</p>
+                <form class="form2">
+                    <label>
+                        <i class='bx bxl-gmail' ></i>
+                        <input type="email" placeholder="Correo Electrónico" id="email2" required autocomplete="username">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt' ></i>
+                        <input type="password" placeholder="Contraseña" id="password2" autocomplete="current-password">
+                        <p id="eye3" class="eye" onclick="mostrarContraseña('password2', 'eye3')">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </p>
+                    </label>
+                    <div>
+                        <a href="./error404.js" class="sinContraseña">
+                            <p>¿Olvidaste tu contraseña?</p>
+                        </a>
+                    </div>
+                    <button type="submit" class= "btn btn-outline-info btn-sm" onclick="iniciarSesion(event)">Iniciar Sesion</button>
+                </form>
             </div>
         </div>
     </div>
+
 
 
     <!-- <footer>
@@ -218,6 +222,6 @@
 
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="../js/registerPacD.js"></script>
+    <script src="/js/registerMedD.js"></script>
 </body>
 </html>

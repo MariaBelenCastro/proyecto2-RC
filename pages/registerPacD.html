@@ -59,21 +59,25 @@
                 <input class="btn btn-light btn-sm" type="button" value="Iniciar Sesion" id="sign-up">
                 <h5>¿Sos médico?</h5>
                 <p>Sé parte de nuestro equipo conformado por una red comprometida con la excelencia médica.</p>
-                <a href="../pages/registerMedD.html"><input class="btn btn-light btn-sm" type="button" value="Unirse como Médico" id="join-as-doctor"></a>
+                <a href="./registerMedD.html"><input class="btn btn-light btn-sm" type="button" value="Unirse como Médico" id="join-as-doctor"></a>
             </div>
         </div>
         <div class="formularioInformacion">
             <div class="formularioInformacionHijo">
                 <h4>Registro paciente</h4>
                 <div class="iconos">
-                    <i class='bx bxl-google g'></i>
-                    <i class='bx bxl-facebook-circle f' ></i>
+                    <a href="./error404.html"><i class='bx bxl-google g'></i></a>
+                    <a href="./error404.html"><i class='bx bxl-facebook-circle f' ></i></a>
                 </div>
                 <p>También puedes registrarte usando otras cuentas</p>
                 <form class="form">
                     <label>
                         <i class='bx bxs-user-pin'></i>
-                        <input type="text" placeholder="Apellido y nombre" required id="nombre">
+                        <input type="text" placeholder="Nombre" required id="nombre">
+                    </label>
+                    <label>
+                        <i class='bx bxs-user-pin'></i>
+                        <input type="text" placeholder="Apellido" required id="apellido">
                     </label>
                     <label>
                         <i class='bx bxs-id-card'></i>
@@ -98,7 +102,7 @@
                         </p>
                     </label>
                     <div>
-                        <a href="" class="sinContraseña">
+                        <a href="./error404.html" class="sinContraseña">
                             <p>¿Olvidaste tu contraseña?</p>
                         </a>
                     </div>
@@ -108,9 +112,6 @@
         </div>
     </div>
 
-
-
-
     <div class="formularioContenedor login hide">
         <div class="contenedorInformacion">
             <div class="informacion">
@@ -119,35 +120,33 @@
                 <input class="btn btn-light btn-sm" type="button" value="Registrarse" id="sign-in">
             </div>
         </div>
-
-
-    <div class="formularioInformacion">
-        <div class="formularioInformacionHijo">
-            <h2>Iniciar Sesión</h2>
-            <div class="iconos">
-                <i class='bx bxl-google g'></i>
-                <i class='bx bxl-facebook-circle f' ></i>
-            </div>
-            <p>Iniciá sesión con una cuenta</p>
-            <form class="form2">
-                <label>
-                    <i class='bx bxl-gmail' ></i>
-                    <input type="email" placeholder="Correo Electrónico" id="email2" required autocomplete="username">
-                </label>
-                <label>
-                    <i class='bx bx-lock-alt' ></i>
-                    <input type="password" placeholder="Contraseña" id="password2" autocomplete="current-password">
-                    <p id="eye3" class="eye" onclick="mostrarContraseña('password2', 'eye3')">
-                        <i class="fa-solid fa-eye-slash"></i>
-                    </p>
-                </label>
-                <div>
-                    <a href="" class="sinContraseña">
-                        <p>¿Olvidaste tu contraseña?</p>
-                    </a>
+        <div class="formularioInformacion">
+            <div class="formularioInformacionHijo">
+                <h2>Iniciar Sesión</h2>
+                <div class="iconos">
+                    <i class='bx bxl-google g'></i>
+                    <i class='bx bxl-facebook-circle f' ></i>
                 </div>
-                <button type="submit" class= "btn btn-outline-info btn-sm" onclick="iniciarSesion(event)">Iniciar Sesion</button>
-            </form>
+                <p>Iniciá sesión con una cuenta</p>
+                <form class="form2">
+                    <label>
+                        <i class='bx bxl-gmail' ></i>
+                        <input type="email" placeholder="Correo Electrónico" id="email2" required autocomplete="username">
+                    </label>
+                    <label>
+                        <i class='bx bx-lock-alt' ></i>
+                        <input type="password" placeholder="Contraseña" id="password2" autocomplete="current-password">
+                        <p id="eye3" class="eye" onclick="mostrarContraseña('password2', 'eye3')">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </p>
+                    </label>
+                    <div>
+                        <a href="./error404.html" class="sinContraseña">
+                            <p>¿Olvidaste tu contraseña?</p>
+                        </a>
+                    </div>
+                    <button type="submit" class= "btn btn-outline-info btn-sm" onclick="iniciarSesion(event)">Iniciar Sesion</button>
+                </form>
             </div>
         </div>
     </div>
