@@ -122,7 +122,8 @@ const recibirInputs = () => {
 const iniciarSesion = (event) => {
     event.preventDefault();
     const emailLog = document.getElementById("email2").value;
-    const passwordLog = document.getElementById("password2").value;
+    const passwordLog = document.getElementById("password2").value; 
+    console.log(passwordLog)
     const user = medico.find((item) => item.email === emailLog && item.password === passwordLog);
     if (user) {
         window.location.href = "http://127.0.0.1:5501/medico.html";
