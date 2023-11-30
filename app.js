@@ -135,7 +135,7 @@ let medico = [
         loged:false
     },
     {
-        nombre:'augusto',
+        nombre:'auguste',
         apellido:'Jodar',
         email:'peptio@23123.com',
         password:'34124aasd',
