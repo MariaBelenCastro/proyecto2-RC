@@ -71,7 +71,7 @@ function mostrarContraseña(passwordId, eyeId) {
 
 const recibirInputs = () => {
     nombre = document.getElementById("nombre").value;
-    apellido = document.getElementById("nombre").value;
+    apellido = document.getElementById("apellido").value;
     dni = document.getElementById("dni").value;
     correo = document.getElementById("email").value;
     matricula = document.getElementById("matricula").value;
