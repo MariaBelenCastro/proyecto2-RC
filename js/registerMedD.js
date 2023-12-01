@@ -19,12 +19,12 @@ alertify.set("notifier", "position", "top-center")
 
 let arrayLS = [];
 
-let nombre, apellido, dni, correo, contrasenia, controlContrasenia, matricula;
+let nombre, apellido, dni, correo, contrasenia, controlContrasenia,especialidad, matricula;
 
-let medico = JSON.parse(localStorage.getItem("medico")) || [];
-let dnisRegistro = new Set(medico.map(m => m.dni));
-let correoRegistro = new Set(medico.map(m => m.email));
-let contraseniaRegistro = new Set(medico.map(m => m.password))
+let medicoPendiente = JSON.parse(localStorage.getItem("medicoPendiente")) || [];
+let dnisRegistro = new Set(medicoPendiente.map(m => m.dni));
+let correoRegistro = new Set(medicoPendiente.map(m => m.email));
+let contraseniaRegistro = new Set(medicoPendiente.map(m => m.password))
 
 function registrarse(event) {
     event.preventDefault();
@@ -32,7 +32,7 @@ function registrarse(event) {
         // Las validaciones fallaron, no continuar con el registro
         return;
     }
-    const valorLS = localStorage.getItem("medico");
+    const valorLS = localStorage.getItem("medicoPendiente");
     arrayLS = [];
     if (valorLS) {
         arrayLS = JSON.parse(valorLS);
@@ -40,17 +40,18 @@ function registrarse(event) {
     const nuevoMedico = {
         nombre: nombre,
         apellido: apellido,
-        dni: dni,
-        matricula: matricula,
         email: correo,
         password: contrasenia,
+        dni: dni,
+        especialidad: especialidad,
+        matricula: matricula,
     };
 
     // Agregar el nuevo usuario al array
     arrayLS.push(nuevoMedico);
 
     // Guardar el array actualizado en el localStorage
-    localStorage.setItem("medico", JSON.stringify(arrayLS));
+    localStorage.setItem("medicoPendiente", JSON.stringify(arrayLS));
 
     console.log(arrayLS);
     alertify.success("Su registro se completó correctamente")
@@ -75,6 +76,7 @@ const recibirInputs = () => {
     dni = document.getElementById("dni").value;
     correo = document.getElementById("email").value;
     matricula = document.getElementById("matricula").value;
+    especialidad = document.getElementById("especialidad").value;
     contrasenia = document.getElementById("password").value;
     controlContrasenia = document.getElementById("controlPassword").value;
     if (dnisRegistro.has(dni)) {
@@ -85,18 +87,22 @@ const recibirInputs = () => {
         alertify.error("Este correo electrónico ya está registrado. Por favor, ingrese otro correo electrónico.");
         return false;
     }
-    if (!nombre.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ"°]{4,12}$/)) {
-        alertify.error("El nombre ingresado no es válido, debe contener entre 4 y 18 caracteres alfanuméricos");
+    if (!nombre.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ"° ]{4,12}$/)) {
+        alertify.error("El nombre ingresado no es válido, debe contener entre 4 y 12 caracteres alfabéticos");
         return false;
     };
-    if (!nombre.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ"°]{4,12}$/)) {
-        alertify.error("El apellido ingresado no es válido, debe contener entre 4 y 12 caracteres alfanuméricos");
+    if (!apellido.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ"° ]{4,12}$/)) {
+        alertify.error("El apellido ingresado no es válido, debe contener entre 4 y 12 caracteres alfabéticos");
         return false;
     };
     if (!dni.match(/^\d{7,8}$/)) {
         alertify.error("El DNI ingresado no es válido, debe contener entre 7 y 8 dígitos numéricos");
         return false;
     }
+    if (!especialidad.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ"° ]{4,18}$/)) {
+        alertify.error("La matricula ingresada no es válida, debe contener entre 4 y 12 caracteres alfabéticos");
+        return false;
+    };
     if (!matricula.match(/^\d{4,12}$/)) {
         alertify.error("La matrícular ingresada no es válida, debe contener entre 4 y 12 dígitos numéricos");
         return false;

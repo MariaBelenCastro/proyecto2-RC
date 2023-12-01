@@ -1,8 +1,12 @@
-body {
+/* body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+} */
+
+.contenedor{
+    margin-top: 100px;
 }
 
 .navC{
@@ -15,7 +19,7 @@ body {
 
 .formularioContenedor {
     display: flex;
-    margin-top: 50px;
+    margin-top: 100px;
     height: 550px;
     max-width: 900px;
     border-radius: 15px;
@@ -195,6 +199,10 @@ footer{
     background-repeat: no-repeat;
 }
 
+.bgFooterC{
+    background-color: rgb(1, 1, 54);
+}
+
 @media (max-width: 768px) {
     html {
         font-size: 12px;
@@ -232,4 +240,3 @@ footer{
         border-top-right-radius: 0;
     }
 }
-
