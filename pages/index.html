@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/index.css">
-    <script defer src="app.js"></script>
-    <title>Primer sprint</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <script src="../js/navbar.js"></script>
+    <title>Pag ppal</title>
 </head>
-<body onload="cargarObjetos()">
-    <!--Navbar--> <!--faltaria cambiarle el toggler y las lineas que a mas claras asi se noten.Tambien cambiar el iniciar sesion y mi cuenta-->
+<body>  
     <nav class="navbar navbar-expand-lg  fixed-top navC">
         <div class="container-fluid">
           <div class="">
             <a class="navbar-brand" href="#">
-                <img src="/assets/logo.png" width="100px" alt="">
+                <img src="../assets/logo.png" width="100px" alt="">
             </a>
           </div>
             <div class="navbar-nav navbar-brand me-auto">
@@ -32,17 +31,20 @@
             <ul class="navbar-nav ms-auto">
                 
                 <li class="nav-item">
-                <button type="button" class="btn btn-primary fw-bold">Pedir Turno</button>
+                <button type="button" class="btn btn-primary fw-bold" id="pedirTurno" onclick="pedirTurno()">Pedir Turno</button>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" id="noUser">
                     <a class="nav-link dropdown-toggle text-white fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Mi cuenta
                     </a>
                     <ul class="dropdown-menu bgFooterC"> 
-                        <li><a class="dropdown-item" href="#"> Iniciar Sesion</a></li>  <!--Cambiar letras a blanco y cuando se abra-->
+                        <li><a class="dropdown-item text-white ddHover" href="./registerMedD.html">Médicos</a></li> 
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Registrarse</a></li>
+                        <li><a class="dropdown-item text-white ddHover" href="./registerPacD.html">Pacientes</a></li>
                     </ul>
+                </li>
+                <li class="nav-link text-white fw-medium" id="userLog">
+                  <a ></a>
                 </li>
             </ul>
           </div>
@@ -52,7 +54,7 @@
       <div class="contenedorImagenC w-100 position-relative overflow-hidden">
         <div class="overlayC"></div>
         <div class="w-100">
-          <img src="/assets/portada.jpg" alt="" class="w-100">
+          <img src="../assets/portada.jpg" alt="" class="w-100">
         </div>
         <div class="tituloimagenC w-100 h-100 top-0 end-0 position-absolute text-center d-flex justify-content-center align-items-center">
           <h1 class="textoImagenC">Bienvenido a PortalMed</h1>
@@ -67,7 +69,7 @@
           <div class="container equipoM">
             <div class="row">
               <div class="col-12 col-md-4">
-                <img src="/assets/equipoMed2.jpeg"  class="img-fluid rounded-2" alt="">
+                <img src="../assets/equipoMed2.jpeg"  class="img-fluid rounded-2" alt="">
               </div>
               <div class="col-12 col-md-8">
                 <h2 class="text-center text-white">Servicios medicos de excelencia</h2>
@@ -148,21 +150,21 @@
                 <div class="carousel-inner">
 
                   <div class="carousel-item active">
-                    <img src="assets/cardiologiaC.jpeg" class="d-block w-100 rounded-2 carouselImagenC" alt="...">
+                    <img src="../assets/cardiologiaC.jpeg" class="d-block w-100 rounded-2 carouselImagenC" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5 class="text-dark textSliderC">Pediatría</h5>
                     </div>
                   </div>
 
                   <div class="carousel-item">
-                    <img src="assets/traumatologiaC.jpg" class="d-block w-100 rounded-2  carouselImagenC" alt="...">
+                    <img src="../assets/traumatologiaC.jpg" class="d-block w-100 rounded-2  carouselImagenC" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5 class="text-dark textSliderC">Traumatología</h5>
                     </div>
                   </div>
 
                   <div class="carousel-item">
-                    <img src="./assets/obstetriciaC.jpeg" class="d-block w-100 rounded-2 carouselImagenC" alt="...">
+                    <img src="../assets/obstetriciaC.jpeg" class="d-block w-100 rounded-2 carouselImagenC" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5 class="text-dark textSliderC">Obstetricia</h5>
                     </div>

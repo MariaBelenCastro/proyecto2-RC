@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/app.css">
+    <link rel="stylesheet" href="../styles/registerPacD.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/misTurnos.js"></script>
+    <title>Pedir Turno</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg  fixed-top navC">
+        <div class="container-fluid">
+            <div class="">
+                <a class="navbar-brand" href="#">
+                    <img src="/assets/logo.png" width="100px" alt="">
+                </a>
+            </div>
+            <div class="navbar-nav navbar-brand me-auto">
+                <a class="nav-link text-white fw-medium" aria-current="page" href="#">
+                    Inicio
+                </a>
+            </div>
+            <button class="navbar-toggler bgTogglerC" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary fw-bold" id="pedirTurno"
+                            onclick="pedirTurno()">Pedir Turno</button>
+                    </li>
+                    <li class="nav-item dropdown" id="noUser">
+                        <a class="nav-link dropdown-toggle text-white fw-medium" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Mi cuenta
+                        </a>
+                        <ul class="dropdown-menu bgFooterC"> <!--cambiar el nombre de la clase-->
+                            <li><a class="dropdown-item text-white" href="pages/registerMedD.html"> Medicos</a></li>
+                            <!--cambiar el las letras cuando hace hover-->
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white" href="pages/registerPacD.html">Pacientes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-link text-white fw-medium" id="userLog">
+                        <a></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="listaTurnos text-bg-light">
+                    <div class="turno">                        
+                    </div>
+                </div>
+            </div>
+        </div>            
+        <div class="row">
+            <footer class=" bgFooterC text-white pt-5 pb-4" style="position: relative;top:6.3em;">
+                <div class="container text-center text-md-start">
+                    <div class="row text-center text-md-start">
+
+                        <div class="col-md-6 mt-3 text-center">
+                            <h5 class="text-uppercase mb-4 fw-bold">AYUDA</h5>
+                            <div>
+                                <a href="#" class="text-white">Preguntas frecuentes</a>
+                            </div>
+                            <div>
+                                <a href="#" class="text-white">Quiero trabajar con ustedes</a>
+                            </div>
+                            <div>
+                                <a href="#" class="text-white">Quiero ser proovedor</a>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 mt-3 text-center">
+                            <h5 class="text-uppercase  mb-4 fw-bold">Contacto</h5>
+                            <div>
+                                <i class="bi bi-telephone-inbound pb-1"> (0381)-4302142</i>
+                            </div>
+                            <div>
+                                <i class="bi bi-envelope-at pb-1"> PortalMed@gmail.com</i>
+                            </div>
+                            <div>
+                                <i class="bi bi-clock-history pb-1"> 24 hs a tu disposición</i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+        </footer>
+    </div>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

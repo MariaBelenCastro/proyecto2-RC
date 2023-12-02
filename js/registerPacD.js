@@ -31,6 +31,8 @@ let dnisRegistro = new Set(paciente.map(p => p.dni));
 let correoRegistro = new Set(paciente.map(p => p.email));
 let contraseniaRegistro = new Set(paciente.map(p => p.password))
 
+
+
 function registrarse(event) {
     event.preventDefault();
     if (!recibirInputs()) {
@@ -73,6 +75,7 @@ function mostrarContraseña(passwordId, eyeId) {
     const iconClass = (passwordInput.type === "password") ? "fa-eye-slash" : "fa-eye";
     eyeIcon.className = `fa-solid ${iconClass}`;
 }
+
 
 const recibirInputs = () => {
     nombre = document.getElementById("nombre").value;
@@ -125,6 +128,8 @@ const iniciarSesion = (event) => {
     const passwordLog = document.getElementById("password2").value;
     const user = paciente.find((item) => item.email === emailLog && item.password === passwordLog);
     if (user) {
+        // Usuario Logeado
+        localStorage.setItem("userLogged",JSON.stringify(user));
         window.location.href = "medico.html";
         if(user.isAdmin) {
             window.location.href='administracion.html'

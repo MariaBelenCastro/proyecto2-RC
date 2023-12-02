@@ -1,13 +1,16 @@
 .navC{
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(1, 1, 54,0.9);
     width: 100%;
     position:sticky;
     top: 0;
     z-index: 1;
-    
-    /*
-    background-color: #A0E9FF;
-    */
+}
+
+.ddHover:hover{
+    background: #088adb;
+    color:white;
+    font-weight: 600;
+
 }
 
 body{

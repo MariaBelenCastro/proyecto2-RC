@@ -71,7 +71,7 @@ function mostrarContraseña(passwordId, eyeId) {
 
 const recibirInputs = () => {
     nombre = document.getElementById("nombre").value;
-    apellido = document.getElementById("apellido").value;
+    apellido = document.getElementById("nombre").value;
     dni = document.getElementById("dni").value;
     correo = document.getElementById("email").value;
     matricula = document.getElementById("matricula").value;
@@ -126,9 +126,11 @@ const iniciarSesion = (event) => {
     console.log(passwordLog)
     const user = medico.find((item) => item.email === emailLog && item.password === passwordLog);
     if (user) {
-        window.location.href = "http://127.0.0.1:5501/medico.html";
+      // Usuario Logeado
+      localStorage.setItem("userLogged", JSON.stringify(user));
+      window.location.href = "http://127.0.0.1:5501/medico.html";
     } else {
-        // Usuario no encontrado, mostrar mensaje de error
-        alertify.error("El usuario o la contraseña ingresada no son correctos");
+      // Usuario no encontrado, mostrar mensaje de error
+      alertify.error("El usuario o la contraseña ingresada no son correctos");
     }
 };
