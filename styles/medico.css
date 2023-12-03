@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+   
+}
+
+
+.container-fluid{
+    text-align: center;
+    
+
+}
+
+.inputBuscar{
+    text-align: center;
+    color: black;
+    
+}
+.bloqMedico{
+    font-size: 20px;
+    color: black; 
+    
+}
