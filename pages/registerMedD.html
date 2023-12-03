@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/app.css">
     <link rel="stylesheet" href="../styles/registerPacD.css">
+    <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -16,41 +17,49 @@
     <title>Registrarse</title>
 </head>
 <body>
-    <!--Primer componente-->
-    <nav class="navbar navbar-expand-lg navC">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg  fixed-top navC">
+        <div class="container-fluid">
+          <div class="">
             <a class="navbar-brand" href="#">
-                <img src="../assets/equipo-medico.png" width="40px" alt="">
+                <img src="/assets/logo.png" width="100px" alt="">
             </a>
+          </div>
             <div class="navbar-nav navbar-brand me-auto">
-                <a class="nav-link" aria-current="page" href="#">
+                <a class="nav-link text-white fw-medium" aria-current="page" href="#">
                     Inicio
                 </a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler bgTogglerC" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            
             <ul class="navbar-nav ms-auto">
+                
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pedir turno</a>
+                <button type="button" class="btn btn-primary fw-bold" id="pedirTurno" onclick="pedirTurno()">Pedir Turno</button>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Mi cuenta
+                <li class="nav-item dropdown" id="noUser">
+                    <a class="nav-link dropdown-toggle text-white fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Mi cuenta
                     </a>
-                    <ul class="dropdown-menu MiCuenta">
-                        <li><a class="dropdown-item" href="#">Iniciar Sesion</a></li>
+                    <ul class="dropdown-menu bgFooterC"> <!--cambiar el nombre de la clase-->
+                        <li><a class="dropdown-item text-white" href="registerMedD.html"> Medicos</a></li> <!--cambiar el las letras cuando hace hover-->
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Registrarse</a></li>
+                        <li><a class="dropdown-item text-white" href="registerPacD.html">Pacientes</a></li>
                     </ul>
                 </li>
+                <li class="nav-link text-white fw-medium" id="userLog">
+                  <a ></a>
+                </li>
             </ul>
-            </div>
+          </div>
         </div>
-    </nav>
+      </nav>
 
-
+      <div class="container-fluid contenedor mx-auto">
+        <div class="row ">
     <div class="formularioContenedor registro">
         <div class="contenedorInformacion">
             <div class="informacion">
@@ -130,7 +139,7 @@
         </div>
         <div class="formularioInformacion">
             <div class="formularioInformacionHijo">
-                <h2>Iniciar Sesión</h2>
+                <h2>Iniciá Sesión con cuenta medica</h2>
                 <div class="iconos">
                     <i class='bx bxl-google g'></i>
                     <i class='bx bxl-facebook-circle f' ></i>
@@ -158,74 +167,53 @@
             </div>
         </div>
     </div>
+    </div>
+
+    </div>
 
 
+    <div class="row">
+        <footer class=" bgFooterC text-white pt-5 pb-4" style="position: relative;top:6.3em;">
+            <div class="container text-center text-md-start">
+                <div class="row text-center text-md-start">
 
-    <!-- <footer>
-    <div class="container-fluid p-5 bgC">
-        <div class="row w-100 text-center">
-            <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                    <li class="text-white mb-2 fw-medium">
-                        Acerca de nosotros:
-                    </li>
-                    <li class="text-white">
-                        Servicio de especialidades medicas de Tucumán
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled">
-                    <li class="text-white fw-medium">Redes sociales</li>
-                    <div class="mt-2">
-                        <a href="">
-                            <img src="../assets/logoIG.png" alt="ig" width="30px">
-                        </a>
-                        <a href="">
-                            <img src="../assets/logoFB.png" alt="fb"  width="30px">
-                        </a>
-                        <a href="">
-                            <img src="../assets/logoTW.png" alt="tw"  width="30px">
-                        </a>
+                    <div class="col-md-6 mt-3 text-center">
+                        <h5 class="text-uppercase mb-4 fw-bold">AYUDA</h5>
+                        <div>
+                            <a href="#" class="text-white">Preguntas frecuentes</a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-white">Quiero trabajar con ustedes</a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-white">Quiero ser proovedor</a>
+                        </div>
+
                     </div>
-                </ul>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <ul class="list-unstyled fw-medium">
-                    <a href="#" class="text-decoration-none text-white ">
-                        <li>Contacto</li>
-                        <li>
-                            <img src="./assets/horarioC.png" alt="" width="40px"> 8:30 a 20 hs
-                        </li>
-                        <li>
-                            <img src="./assets/mailC.png" alt="" width="30px"> PortalMed@gmail.com
-                        </li>
-                        <li>
-                            <img src="./assets/telC.png" alt="" width="30px"> 381922111
-                        </li>
-                    </a>
-                </ul>
-            </div>
-            <div class="border-top ">
-                <div class="row p-3">
-                    <div class="col-xs-12 ">
-                        <h6 class="text-center text-white mb-1">Copyright - All rights reserved  © 2023</h6>
+
+                    <div class="col-md-6 mt-3 text-center">
+                        <h5 class="text-uppercase  mb-4 fw-bold">Contacto</h5>
+                        <div>
+                            <i class="bi bi-telephone-inbound pb-1"> (0381)-4302142</i>
+                        </div>
+                        <div>
+                            <i class="bi bi-envelope-at pb-1"> PortalMed@gmail.com</i>
+                        </div>
+                        <div>
+                            <i class="bi bi-clock-history pb-1"> 24 hs a tu disposición</i>
+                        </div>
                     </div>
+
                 </div>
             </div>
-        </div> -->
-
-          <!-- <div class="col-md-6 col-lg-3">
-              <ul class=" list-unstyled">
-                  <a href="#" class="text-decoration-none text-white">
-                      <li >Atencion al cliente</li>
-                  </a>
-              </ul>
-          </div> -->
-    </footer>
+        </footer>
+    </div>
+</div>
 
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="/js/registerMedD.js"></script>
+    <script src="../app.js"></script>
+
 </body>
 </html>

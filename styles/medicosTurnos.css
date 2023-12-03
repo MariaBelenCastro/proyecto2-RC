@@ -1,0 +1,31 @@
+.tabla-medico {
+    margin-top: 120px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+h2 {
+    color: white;
+}
+
+.btn-success {
+    color: white;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    color: white;
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.contenedorFooter{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
+
+}

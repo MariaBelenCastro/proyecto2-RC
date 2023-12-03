@@ -55,10 +55,10 @@ function registrarse(event) {
     arrayLS.push(nuevoPaciente);
 
     // Guardar el array actualizado en el localStorage
-    localStorage.setItem("pacientePendiente", JSON.stringify(arrayLS));
-
+    
     console.log(arrayLS);
     alertify.warning(`Su registro se está procesando. La aprobación será enviada a ${correo}`)
+    localStorage.setItem("pacientePendiente", JSON.stringify(arrayLS));
     form.reset();
 
     // dnisRegistro.add(dni);
@@ -119,22 +119,53 @@ const recibirInputs = () => {
     return true;
 }
 
+// const iniciarSesion = (event) => {
+//     event.preventDefault();
+//     const emailLog = document.getElementById("email2").value;
+//     const passwordLog = document.getElementById("password2").value;
+//     const user = paciente.find((item) => item.email === emailLog && item.password === passwordLog);
+//     if (user) {
+//         // window.location.href = "medico.html"; agregar la direccion de turnos pacientes
+//         if(user.isAdmin) {
+//             window.location.href='administracion.html'
+//         }
+//         else{
+//             window.location.href="127.0.0.1:5501/index.html"
+//         }
+//     } else {
+//         // Usuario no encontrado, mostrar mensaje de error
+//         alertify.error("El usuario o la contraseña ingresada no son correctos");
+//     }
+// };
+
 const iniciarSesion = (event) => {
     event.preventDefault();
     const emailLog = document.getElementById("email2").value;
-    const passwordLog = document.getElementById("password2").value;
+    const passwordLog = document.getElementById("password2").value; 
+    console.log(passwordLog)
     const user = paciente.find((item) => item.email === emailLog && item.password === passwordLog);
     if (user) {
-        window.location.href = "medico.html";
-        if(user.isAdmin) {
-            window.location.href='administracion.html'
-        }
-        else{
-            window.location.href="http://127.0.0.1:5501/index.html"
-        }
+        localStorage.setItem('pacienteLogueado', JSON.stringify(user));
+        function verificarSesion() {
+        const pacienteLogueado = JSON.parse(localStorage.getItem('pacienteLogueado'));
+    // if (pacienteLogueado) {
+
+    // } else {
+        
+    // }
+}
+
+verificarSesion();
+        window.location.href = "/pages/medicosTurnos.html";
     } else {
         // Usuario no encontrado, mostrar mensaje de error
         alertify.error("El usuario o la contraseña ingresada no son correctos");
     }
 };
+
+function cerrarSesion() {
+    localStorage.removeItem('medicoLogueado');
+
+}
+
 

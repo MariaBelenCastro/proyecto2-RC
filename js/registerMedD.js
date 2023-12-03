@@ -132,9 +132,26 @@ const iniciarSesion = (event) => {
     console.log(passwordLog)
     const user = medico.find((item) => item.email === emailLog && item.password === passwordLog);
     if (user) {
-        window.location.href = "http://127.0.0.1:5501/medico.html";
+        localStorage.setItem('medicoLogueado', JSON.stringify(user));
+        function verificarSesion() {
+        const medicoLogueado = JSON.parse(localStorage.getItem('medicoLogueado'));
+    // if (medicoLogueado) {
+
+    // } else {
+        
+    // }
+}
+
+verificarSesion();
+        window.location.href = "/pages/medicosTurnos.html";
     } else {
         // Usuario no encontrado, mostrar mensaje de error
         alertify.error("El usuario o la contraseña ingresada no son correctos");
     }
 };
+
+function cerrarSesion() {
+    localStorage.removeItem('medicoLogueado');
+    // Redirigir a la página de inicio o hacer otras acciones necesarias
+}
+
