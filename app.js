@@ -166,30 +166,30 @@ paciente = [
      }
    ]
 
-function cargarObjetos() {
-     if (!localStorage.getItem('medico')) {
-         localStorage.setItem('medico', JSON.stringify(medico));
-     }
+//  function cargarObjetos() {
+//       if (!localStorage.getItem('medico')) {
+//          localStorage.setItem('medico', JSON.stringify(medico));
+//       }
 
-     if (!localStorage.getItem('medicoPendiente')) {
-         localStorage.setItem('medicoPendiente', JSON.stringify(medicoPendiente));
-     }
-     if (!localStorage.getItem('paciente')) {
-         localStorage.setItem('paciente', JSON.stringify(paciente));
-     }
+//       if (!localStorage.getItem('medicoPendiente')) {
+//           localStorage.setItem('medicoPendiente', JSON.stringify(medicoPendiente));
+//       }
+//       if (!localStorage.getItem('paciente')) {
+//           localStorage.setItem('paciente', JSON.stringify(paciente));
+//       }
 
-     if (!localStorage.getItem('pacientePendiente')) {
-         localStorage.setItem('pacientePendiente', JSON.stringify(pacientePendiente));
-     }
+//       if (!localStorage.getItem('pacientePendiente')) {
+//           localStorage.setItem('pacientePendiente', JSON.stringify(pacientePendiente));
+//       }
 
-     if (!localStorage.getItem('turno')) {
-        localStorage.setItem('turnoPendiente', JSON.stringify(turno));
-    }
+//       if (!localStorage.getItem('turno')) {
+//          localStorage.setItem('turnoPendiente', JSON.stringify(turno));
+//      }
 
-     if (!localStorage.getItem('turno')) {
-         localStorage.setItem('turno', JSON.stringify(turno));
-     }
- }
+//       if (!localStorage.getItem('turno')) {
+//           localStorage.setItem('turno', JSON.stringify(turno));
+//       }
+//   }
 
 // function cargarObjetos() {
 //     // Estructura de datos hardcodeada
@@ -211,20 +211,20 @@ function cargarObjetos() {
 // }
 
  function cargarObjetos() {
-     const datosHardcodeados = {
+    const datosHardcodeados = {
          medico: medico || [],
          medicoPendiente: medicoPendiente || [],
          paciente: paciente || [],
          pacientePendiente: pacientePendiente || [],
          turnoPendiente: turnoPendiente || [],
          turno: turno || []
-     };
+    };
 
-     for (const clave in datosHardcodeados) {
+    for (const clave in datosHardcodeados) {
          if (!localStorage.getItem(clave)) {
              localStorage.setItem(clave, JSON.stringify(datosHardcodeados[clave]));
         }
-     }
+    }
  }
 
 cargarObjetos();
