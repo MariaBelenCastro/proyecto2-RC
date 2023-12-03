@@ -1,6 +1,6 @@
 let medico = [
     { 
-        nombre:'Juan Perez',
+        nombre:'Juan Jose',
         apellido:'Mendez',
         dni:'12431235',
         email:'pepe@olis',
@@ -10,7 +10,7 @@ let medico = [
         especialidad:'Pediatra'
     },
     {
-        nombre:'Jose',
+        nombre:'Jose Juan',
         apellido:'Pierini',
         dni:'12431235',
         email:'pepe@olis',
@@ -20,8 +20,8 @@ let medico = [
         especialidad:'Oncologo'
     },
     {
-        nombre:'Jose',
-        apellido:'Pierini',
+        nombre:'Jose Augusto',
+        apellido:'Agostini',
         dni:'12431235',
         email:'pepe@olis',
         password:'12343asd',
@@ -31,7 +31,7 @@ let medico = [
     }
     
   ];
-  let medicoPendiente =[
+  let paciente =[
     {
         nombre:'pepito augusto',
         apellido:'Jodar',
@@ -68,7 +68,7 @@ let medico = [
         dni:12341234
     }
   ]
-  let paciente = [
+  let medicoPendiente = [
     { 
         nombre:'Juan Perez',
         apellido:'Mendez',
@@ -149,4 +149,9 @@ function cargarObjetos() {
     localStorage.setItem('paciente', JSON.stringify(paciente));
     localStorage.setItem('pacientePendiente', JSON.stringify(pacientePendiente));
     localStorage.setItem('turno', JSON.stringify(turno));
+}
+
+function olis(){
+    var olis = 'olis'
+    return olis;
 }
