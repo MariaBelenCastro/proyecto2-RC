@@ -34,7 +34,7 @@ function cargarTurnos() {
     });
 }
 
-// Llamar a la función al cargar la página
+
 window.onload = cargarTurnos;
 
 // Aprueba un turno
@@ -50,6 +50,3 @@ function aprobarTurno(index) {
 
     cargarTurnos();
 }
-
-// Carga los turnos al cargar la página
-window.onload = cargarTurnos;

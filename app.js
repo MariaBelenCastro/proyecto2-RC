@@ -1,4 +1,4 @@
-let turno = [
+turno = [
     { 
         paciente:'Jose',
         especialista:'Mendez',
@@ -9,7 +9,7 @@ let turno = [
     },
 ]
 
-let turnoPendiente = [
+turnoPendiente = [
     { 
         paciente:'Jose',
         especialista:'Mendez',
@@ -126,7 +126,7 @@ medicoPendiente = [
     
   ];
 
-pacientePendiente =[
+paciente =[
     {
          nombre:'pepito augusto',
          apellido:'Jodar',
@@ -229,5 +229,3 @@ pacientePendiente =[
         }
      }
  }
-
-cargarObjetos();
