@@ -24,97 +24,99 @@ medico = [
     { 
         nombre:'Juan Perez',
         apellido:'Mendez',
-        dni:'12431235',
+        dni: '41291322',
         email:'juanmendez@gmail.com',
-        password:'12343asd',
+        password:'Juanperez123',
         matricula:'12412',
-        isAdmin:false,
+        isAdmin:true,
         especialidad:'Pediatra'
     },
     {
-        nombre:'Jose',
-        apellido:'Pierini',
-        dni:'12431235',
-        email:'pepe@olis',
-        password:'12343asd',
+        nombre:'Miguel',
+        apellido:'Medina',
+        dni: '35642589',
+        email:'miguelmedina@gmail.com',
+        password:'Miguel1234',
         matricula:'12412',
         isAdmin:false,
         especialidad:'Oncologo'
     },
     {
-        nombre:'Jose',
-        apellido:'Pierini',
-        dni:'12431235',
-        email:'pepe@olis',
-        password:'12343asd',
+        nombre:'Gabriel',
+        apellido:'Lopez',
+        dni: '12543422',
+        email:'Gabriellopez@hotmail.com',
+        password:'Gabriell1234',
         matricula:'12412',
         isAdmin:false,
         especialidad:'Oncologo'
     }
     
   ];
-medicoPendiente =[
+
+  pacientePendiente =[
     {
-        nombre:'pepito augusto',
+        nombre:'Ramiro',
         apellido:'Jodar',
-        email:'peptio@23123.com',
-        password:'34124aasd',
-        dni:12341234
+        email:'ramirojodar@gmail.com',
+        password:'Ramiro1234',
+        dni:'30295441'
     },
     {
-        nombre:'pepito 2',
-        apellido:'yeins',
-        email:'peptssio@23123.com',
-        password:'34124a12asd',
-        dni:12341234
+        nombre:'Emilia',
+        apellido:'Gonzalez',
+        email:'emiliagonzalez@gmail.com',
+        password:'Emilia654',
+        dni: '25413923'
     },
     {
-        nombre:'pepito ',
+        nombre:'Julian',
         apellido:'Martinez',
-        email:'pept22io@23123.com',
-        password:'34124aasd',
-        dni:12341234
+        email:'julianmartinez@gmail.com',
+        password:'martinez1234',
+        dni:'28546997'
     },
     {
-        nombre:'Pepsi',
-        apellido:'Jodar',
+        nombre:'Rodrigo',
+        apellido:'Abregu',
         email:'peptd22io@23123.com',
-        password:'34124aasd',
-        dni:12341234
+        password:'Rodrigo264',
+        dni:'23674421'
     },
     {
-        nombre:'augusto',
+        nombre:'Augusto',
         apellido:'Jodar',
-        email:'peptio@23123.com',
-        password:'34124aasd',
-        dni:12341234
+        email:'Augusto1@hotmail.com',
+        password:'Augusto1234',
+        dni:'27895645'
     }
-  ]
-paciente = [
+  ] 
+
+medicoPendiente = [
     { 
-        nombre:'Juan Perez',
+        nombre:'Juan',
         apellido:'Mendez',
-        dni:'12431235',
-        email:'pepe@olis',
-        password:'12343asd',
-        matricula:'12412',
+        dni:'25364874',
+        email:'juanmendez@gmail.com',
+        password:'Juanperez22',
+        matricula:'25641',
         loged:false,
         especialidad:'Pediatra'
     },
     {
-        nombre:'Jose',
-        apellido:'Pierini',
-        dni:'12431235',
-        email:'pepe@olis',
-        password:'12343asd',
-        matricula:'12412',
+        nombre:'Ramiro',
+        apellido:'Correa',
+        dni:'31054123',
+        email:'ramirocorrea@hotmail.com',
+        password:'Ramiro1234',
+        matricula:'34541',
         isAdmin:false,
         especialidad:'Oncologo'
     },
     {
-        nombre:'Jose',
-        apellido:'Pierini',
-        dni:'12431235',
+        nombre:'Ramon',
+        apellido:'Brizuela',
+        dni:'21024154',
         email:'pepe@gmail.com',
         password:'12343asd',
         matricula:'12412',
@@ -123,11 +125,12 @@ paciente = [
     }
     
   ];
- pacientePendiente =[
+
+pacientePendiente =[
     {
          nombre:'pepito augusto',
          apellido:'Jodar',
-        email:'peptio@23123.com',
+         email:'peptio@23123.com',
          password:'34124aasd',
          dni:12341234,
          loged:false
@@ -149,47 +152,47 @@ paciente = [
          loged:false
      },
      {
-         nombre:'Pepsi',
-         apellido:'Jodar',
+         nombre:'Gustavo',
+         apellido:'Leguizamon',
          email:'peptd22io@23123.com',
          password:'34124aasd',
-         dni:12341234,
+         dni: '29445174',
          loged:false
      },
      {
-         nombre:'auguste',
-         apellido:'Jodar',
+         nombre:'Augusto',
+         apellido:'Batalla',
          email:'peptio@23123.com',
          password:'34124aasd',
-         dni:12341234,
+         dni: '36412698',
          loged:false
      }
    ]
 
- function cargarObjetos() {
-      if (!localStorage.getItem('medico')) {
-         localStorage.setItem('medico', JSON.stringify(medico));
-      }
+//  function cargarObjetos() {
+//       if (!localStorage.getItem('medico')) {
+//          localStorage.setItem('medico', JSON.stringify(medico));
+//       }
 
-      if (!localStorage.getItem('medicoPendiente')) {
-          localStorage.setItem('medicoPendiente', JSON.stringify(medicoPendiente));
-      }
-      if (!localStorage.getItem('paciente')) {
-          localStorage.setItem('paciente', JSON.stringify(paciente));
-      }
+//       if (!localStorage.getItem('medicoPendiente')) {
+//           localStorage.setItem('medicoPendiente', JSON.stringify(medicoPendiente));
+//       }
+//       if (!localStorage.getItem('paciente')) {
+//           localStorage.setItem('paciente', JSON.stringify(paciente));
+//       }
 
-      if (!localStorage.getItem('pacientePendiente')) {
-          localStorage.setItem('pacientePendiente', JSON.stringify(pacientePendiente));
-      }
+//       if (!localStorage.getItem('pacientePendiente')) {
+//           localStorage.setItem('pacientePendiente', JSON.stringify(pacientePendiente));
+//       }
 
-      if (!localStorage.getItem('turno')) {
-         localStorage.setItem('turnoPendiente', JSON.stringify(turno));
-     }
+//       if (!localStorage.getItem('turno')) {
+//          localStorage.setItem('turnoPendiente', JSON.stringify(turno));
+//      }
 
-      if (!localStorage.getItem('turno')) {
-          localStorage.setItem('turno', JSON.stringify(turno));
-      }
-  }
+//       if (!localStorage.getItem('turno')) {
+//           localStorage.setItem('turno', JSON.stringify(turno));
+//       }
+//   }
 
 // function cargarObjetos() {
 //     // Estructura de datos hardcodeada
