@@ -1,0 +1,28 @@
+
+.contenido{
+    padding-inline: 2rem;
+}
+
+body{
+    background-image: url(/assets/fondobody.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+.bgCard{
+    border: 2px solid white !important;
+    backdrop-filter: blur(10px);
+}
+
+@media(max-width:576px){ 
+    .imgCard img{
+        width: 80px;
+    }
+    .contenido h5{
+        font-size:20px;
+        text-align: center;
+    }
+}

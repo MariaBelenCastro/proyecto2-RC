@@ -20,7 +20,7 @@
 
 .formularioContenedor {
     display: flex;
-    margin-top: 100px;
+    margin-top: 150px;
     height: 550px;
     /* max-width: 900px; */
     /* border-radius: 15px;
@@ -197,7 +197,9 @@ footer{
 
 .footerRegister{
     position: relative;
+    
     top:6.3rem
+    
 }
 
 .ddHover:hover{
