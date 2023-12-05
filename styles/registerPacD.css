@@ -183,12 +183,6 @@ footer{
     bottom: 0;
 }
 
-.bgC{
-    background-color:  rgb(90, 131, 148);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 
 .subtitulosC{
     font-weight: 400;
@@ -201,8 +195,20 @@ footer{
     background-repeat: no-repeat;
 }
 
+.footerRegister{
+    position: relative;
+    top:6.3rem
+}
+
+.ddHover:hover{
+    background: #088adb !important;
+    color:white;
+    font-weight: 600;
+}
+
+
 .bgFooterC{
-    background-color: rgb(1, 1, 54);
+    background-color: rgb(1, 1, 54) !important; 
 }
 
 @media (max-width: 768px) {
