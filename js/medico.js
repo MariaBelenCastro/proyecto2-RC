@@ -22,13 +22,14 @@ function mostrarMedicos(filtro) {
     
         // Agregar el contenido al div creado
         medicoDiv.innerHTML = `
-            <p>Nombre: ${medico.nombre}</p>
-            <p>Apellido: ${medico.apellido}</p>
-            <p>DNI: ${medico.dni}</p>
-            <p>Email: ${medico.email}</p>
-            <p>Matrícula: ${medico.matricula}</p>
-            <p>Especialidad: ${medico.especialidad}</p>
-            <hr>
+        <div class="card" style="width: 18rem;">
+        <img src="/assets/imgcard.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dr. ${medico.nombre} ${medico.apellido}</h5>
+          <p class="card-text">Especialidad: ${medico.especialidad}</p>
+          <a href="" class="btn btn-primary">Solicitar Turno</a>
+        </div>
+      </div>
         `;
     
         // Agregar el div creado al contenedor principal
