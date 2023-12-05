@@ -149,9 +149,3 @@ verificarSesion();
         alertify.error("El usuario o la contraseña ingresada no son correctos");
     }
 };
-
-function cerrarSesion() {
-    localStorage.removeItem('medicoLogueado');
-    // Redirigir a la página de inicio o hacer otras acciones necesarias
-}
-

@@ -12,7 +12,8 @@ turno = [
 turnoPendiente = [
     { 
         paciente:'Jose',
-        especialista:'Mendez',
+        especialista:'Lopez',
+        dniMedico: "12543422",
         horario:'12:30',
         email:'pepe@olis',
         consulta:'Peditra',
@@ -213,7 +214,7 @@ paciente =[
 //     }
 // }
 
- function cargarObjetos() {
+function cargarObjetos() {
      const datosHardcodeados = {
          medico: medico || [],
          medicoPendiente: medicoPendiente || [],

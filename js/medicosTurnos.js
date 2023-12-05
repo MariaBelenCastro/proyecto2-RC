@@ -1,5 +1,7 @@
+window.onload = cargarTurnos;
+console.log("Se está ejecutando");
+
 function obtenerMedicoLogueado() {
-    // Lógica para obtener el médico logueado, puede ser desde localStorage, sessionStorage, u otro método.
     const medicoLogueado = JSON.parse(localStorage.getItem('medicoLogueado'));
     return medicoLogueado || null;
 }
@@ -7,46 +9,85 @@ function obtenerMedicoLogueado() {
 const medicoLogueado = obtenerMedicoLogueado();
 
 function cargarTurnos() {
-    let turnosPendientes = JSON.parse(localStorage.getItem('turnoPendiente')) || [];
-    let tabla = document.getElementById('turnos-table').getElementsByTagName('tbody')[0];
+    cargarTabla('turnos-table', 'turnoPendiente');
+    cargarTabla('turnos-aprobados-table', 'turno');
+}
+
+// Cargar tabla de turnos
+function cargarTabla(tablaId, tipoTurno) {
+    let turnos = JSON.parse(localStorage.getItem(tipoTurno)) || [];
+    let tabla = document.getElementById(tablaId).getElementsByTagName('tbody')[0];
     tabla.innerHTML = '';
-    console.log(medicoLogueado)
-    turnosPendientes.forEach((turno, index) => {
-        console.log(turno.medicoDNI)
-        // Verifica que haya un médico logueado antes de intentar acceder a su propiedad 'dni'
-        if (medicoLogueado) {
+    
+    let contador = 0;  
+
+    turnos.forEach((turno, index) => {
+        if (medicoLogueado && turno.dniMedico === medicoLogueado.dni) {
             let fila = tabla.insertRow();
+            
+            // Columna del contador
+            let celdaContador = fila.insertCell();
+            celdaContador.innerText = ++contador;  
+
             fila.insertCell().innerText = turno.paciente;
-            fila.insertCell().innerText = turno.especialista;
             fila.insertCell().innerText = turno.horario;
             fila.insertCell().innerText = turno.consulta;
             fila.insertCell().innerText = turno.dia;
 
+
             let acciones = fila.insertCell();
-            let botonAprobar = document.createElement('button');
-            botonAprobar.innerText = 'Aprobar';
-            botonAprobar.className = 'btn btn-success';
-            botonAprobar.onclick = function() {
-                aprobarTurno(index);
-            };
-            acciones.appendChild(botonAprobar);
+            if (tipoTurno === 'turno') {
+                let botonHistoriaClinica = document.createElement('button');
+                botonHistoriaClinica.innerText = 'Historia Clínica';
+                botonHistoriaClinica.className = 'btn btn-info';
+                botonHistoriaClinica.setAttribute('data-bs-toggle', 'modal');
+                botonHistoriaClinica.setAttribute('data-bs-target', '#historiaClinicaModal');
+                acciones.appendChild(botonHistoriaClinica);
+            } else {
+                let botonAprobar = document.createElement('button');
+                botonAprobar.innerText = 'Aprobar';
+                botonAprobar.className = 'btn btn-success';
+                botonAprobar.onclick = function() {
+                    aprobarTurno(index, tipoTurno);
+                };
+                acciones.appendChild(botonAprobar);
+            }
         }
     });
 }
 
-
-window.onload = cargarTurnos;
-
-// Aprueba un turno
-function aprobarTurno(index) {
-    let turnosPendientes = JSON.parse(localStorage.getItem('turnoPendiente')) || [];
-    let turno = turnosPendientes.splice(index, 1)[0];
+function aprobarTurno(index, tipoTurno) {
+    let turnos = JSON.parse(localStorage.getItem(tipoTurno)) || [];
+    let turno = turnos.splice(index, 1)[0];
 
     let turnosAprobados = JSON.parse(localStorage.getItem('turno')) || [];
     turnosAprobados.push(turno);
 
-    localStorage.setItem('turnoPendiente', JSON.stringify(turnosPendientes));
+    localStorage.setItem(tipoTurno, JSON.stringify(turnos));
     localStorage.setItem('turno', JSON.stringify(turnosAprobados));
 
     cargarTurnos();
+}
+
+function guardarHistoriaClinica() {
+    const historiaClinica = document.getElementById('historiaClinicaTextArea').value;
+    console.log('Historia Clínica Guardada:', historiaClinica);
+    const historiaClinicaModal = new bootstrap.Modal(document.getElementById('historiaClinicaModal'));
+    historiaClinicaModal.hide();
+}
+
+
+document.getElementById('userActionButton').addEventListener('click', userAction);
+
+function userAction() {
+    if (medicoLogueado) {
+        cerrarSesion();
+    } else {
+        window.location.href = "index.html";
+    }
+}
+
+function cerrarSesion() {
+    localStorage.removeItem('medicoLogueado');
+    window.location.href = "index.html";
 }
