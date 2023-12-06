@@ -4,8 +4,9 @@ turno = [
         especialista:'Mendez',
         horario:'12:30',
         email:'pepe@olis',
-        consulta:'Peditra',
-        dia:'17/05/2023',
+        consulta:'Pediatra',
+        dia:'miercoles',
+        horario:'09:00am'
     },
 ]
 
@@ -15,9 +16,18 @@ turnoPendiente = [
         especialista:'Mendez',
         horario:'12:30',
         email:'pepe@olis',
-        consulta:'Peditra',
-        dia:'17/05/2023',
+        consulta:'Pediatra',
+        dia:'Lunes',
+        horario:'09:00am'
     },
+    {   paciente:'Jospepee',
+        especialista:'Mendez Juan',
+        horario:'12:30',
+        email:'pepe@olis',
+        consulta:'Kinesiologo',
+        dia:'Lunes',
+        horario:'09:00am'
+    }
 ]
 
 medico = [
@@ -28,8 +38,9 @@ medico = [
         email:'juanmendez@gmail.com',
         password:'Juanperez123',
         matricula:'12412',
-        isAdmin:true,
-        especialidad:'Pediatra'
+        especialidad:'Pediatra',
+        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
+        dia:['Lunes','Miercoles','Viernes']
     },
     {
         nombre:'Miguel',
@@ -38,8 +49,9 @@ medico = [
         email:'miguelmedina@gmail.com',
         password:'Miguel1234',
         matricula:'12412',
-        isAdmin:false,
-        especialidad:'Oncologo'
+        especialidad:'Oncologo',
+        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
+        dia:['sabado','domingo','Viernes']
     },
     {
         nombre:'Gabriel',
@@ -48,8 +60,9 @@ medico = [
         email:'Gabriellopez@hotmail.com',
         password:'Gabriell1234',
         matricula:'12412',
-        isAdmin:false,
-        especialidad:'Oncologo'
+        especialidad:'Oncologo',
+        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
+        dia:['Lunes','Jueves','Miercoles']
     }
     
   ];
@@ -101,7 +114,8 @@ medicoPendiente = [
         password:'Juanperez22',
         matricula:'25641',
         loged:false,
-        especialidad:'Pediatra'
+        especialidad:'Pediatra',
+        
     },
     {
         nombre:'Ramiro',
@@ -111,7 +125,8 @@ medicoPendiente = [
         password:'Ramiro1234',
         matricula:'34541',
         isAdmin:false,
-        especialidad:'Oncologo'
+        especialidad:'Oncologo',
+        
     },
     {
         nombre:'Ramon',
@@ -121,7 +136,8 @@ medicoPendiente = [
         password:'12343asd',
         matricula:'12412',
         isAdmin:false,
-        especialidad:'Oncologo'
+        especialidad:'Oncologo',
+        
     }
     
   ];
@@ -132,7 +148,7 @@ paciente =[
          apellido:'Jodar',
          email:'peptio@23123.com',
          password:'34124aasd',
-         dni:12341234,
+         dni:'1235',
          loged:false
      },
      {
@@ -168,50 +184,6 @@ paciente =[
          loged:false
      }
    ]
-
-//  function cargarObjetos() {
-//       if (!localStorage.getItem('medico')) {
-//          localStorage.setItem('medico', JSON.stringify(medico));
-//       }
-
-//       if (!localStorage.getItem('medicoPendiente')) {
-//           localStorage.setItem('medicoPendiente', JSON.stringify(medicoPendiente));
-//       }
-//       if (!localStorage.getItem('paciente')) {
-//           localStorage.setItem('paciente', JSON.stringify(paciente));
-//       }
-
-//       if (!localStorage.getItem('pacientePendiente')) {
-//           localStorage.setItem('pacientePendiente', JSON.stringify(pacientePendiente));
-//       }
-
-//       if (!localStorage.getItem('turno')) {
-//          localStorage.setItem('turnoPendiente', JSON.stringify(turno));
-//      }
-
-//       if (!localStorage.getItem('turno')) {
-//           localStorage.setItem('turno', JSON.stringify(turno));
-//       }
-//   }
-
-// function cargarObjetos() {
-//     // Estructura de datos hardcodeada
-//     const datosHardcodeados = {
-//         medico: medico,
-//         medicoPendiente: medicoPendiente,
-//         paciente: paciente,
-//         pacientePendiente: pacientePendiente,
-//         turno: turno
-//     };
-
-//     // Iterar sobre las claves y verificar si existen en localStorage
-//     for (const clave in datosHardcodeados) {
-//         if (!localStorage.getItem(clave)) {
-//             // Si no existe, inicializar con los datos hardcodeados
-//             localStorage.setItem(clave, JSON.stringify(datosHardcodeados[clave]));
-//         }
-//     }
-// }
 
  function cargarObjetos() {
      const datosHardcodeados = {

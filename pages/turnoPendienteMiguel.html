@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/js/turnoPendienteMiguel.js"></script>
+    <title>Document</title>
+</head>
+<body>
+   
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Selección de Médicos</title>
+</head>
+<body>
+    <h1>Seleccione un médico:</h1>
+    <select id="medicoSelect">
+        <!-- Opciones de médicos se agregarán aquí -->
+    </select>
+
+    <h2>Seleccione un día:</h2>
+    <select id="diaSelect">
+        <!-- Opciones de días se agregarán aquí -->
+    </select>
+
+    <h2>Seleccione un horario:</h2>
+    <select id="horarioSelect">
+        <!-- Opciones de horarios se agregarán aquí -->
+    </select>
+    <br>
+    
+    <label for="dniInput">Ingrese DNI:</label>
+    <input type="text" id="dniInput">
+    <button onclick="buscarPaciente()">Buscar</button>
+
+    <div>
+        <label for="nombrePaciente">Nombre del Paciente:</label>
+        <input type="text" id="nombrePaciente" readonly>
+        <br>
+        <label for="emailPaciente">Email del Paciente:</label>
+        <input type="text" id="emailPaciente" readonly>
+    </div>
+    <button onclick="enviarConsulta()">Enviar Consulta</button>
+   
+</body>
+</html>
+
+</body>
+</html>
