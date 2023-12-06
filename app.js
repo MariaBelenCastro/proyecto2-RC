@@ -185,6 +185,7 @@ paciente =[
      }
    ]
 
+
  function cargarObjetos() {
      const datosHardcodeados = {
          medico: medico || [],
