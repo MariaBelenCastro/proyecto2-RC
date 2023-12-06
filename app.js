@@ -44,7 +44,7 @@ medico = [
     },
     {
         nombre:'Miguel',
-        apellido:'Medina',
+        apellido:'Medina Jodar',
         dni: '35642589',
         email:'miguelmedina@gmail.com',
         password:'Miguel1234',
@@ -54,15 +54,70 @@ medico = [
         dia:['sabado','domingo','Viernes']
     },
     {
-        nombre:'Gabriel',
-        apellido:'Lopez',
+        nombre:'Gabriel Jose',
+        apellido:'Lopez Gonzalez',
         dni: '12543422',
         email:'Gabriellopez@hotmail.com',
         password:'Gabriell1234',
         matricula:'12412',
-        especialidad:'Oncologo',
+        especialidad:'Traumatologo',
         horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
         dia:['Lunes','Jueves','Miercoles']
+    },
+    { 
+        nombre:'Juan Jose',
+        apellido:'Mendez',
+        dni: '41291322',
+        email:'juanmendez@gmail.com',
+        password:'Juanperez123',
+        matricula:'12412',
+        especialidad:'Neurologo',
+        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
+        dia:['Lunes','Miercoles','Viernes']
+    },
+    { 
+        nombre:'Chespirito Diego',
+        apellido:'Di Salvador',
+        dni: '41291322',
+        email:'juanmendez@gmail.com',
+        password:'Juanperez123',
+        matricula:'12412',
+        especialidad:'Traumatologo',
+        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
+        dia:['Lunes','Miercoles','Viernes']
+    },
+    { 
+        nombre:'Chespirito Diego',
+        apellido:'Di Salvador',
+        dni: '41291322',
+        email:'juanmendez@gmail.com',
+        password:'Juanperez123',
+        matricula:'12412',
+        especialidad:'Traumatologo',
+        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
+        dia:['Lunes','Miercoles','Viernes']
+    },
+    { 
+        nombre:'Chespirito Diego',
+        apellido:'Di Salvador',
+        dni: '41291322',
+        email:'juanmendez@gmail.com',
+        password:'Juanperez123',
+        matricula:'12412',
+        especialidad:'Traumatologo',
+        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
+        dia:['Lunes','Miercoles','Viernes']
+    },
+    { 
+        nombre:'Chespirito Diego',
+        apellido:'Di Salvador',
+        dni: '41291322',
+        email:'juanmendez@gmail.com',
+        password:'Juanperez123',
+        matricula:'12412',
+        especialidad:'Traumatologo',
+        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
+        dia:['Lunes','Miercoles','Viernes']
     }
     
   ];

@@ -1,5 +1,9 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
 body{
-    min-height: 100vh;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,22 +12,14 @@ body{
 .inputBuscar{
     text-align: center;
     color: black;
+    display: block;
     
+    margin: 0 auto;
 }
 
-.contenedorCardsMedico{
-    font-size: 20px;
-    color: black; 
-    display: flex;
-    justify-content: start;
-    align-items: stretch;
-    width: 100%;
-    gap: calc(8%/3);
-    row-gap: 1rem;
-}
 
 .card-img-top{
-    height:15rem;
+    height:10rem;
     
 }
 
@@ -35,8 +31,80 @@ body{
     width: 100%;
     background-color: transparent;
     color: white;
+    text-align: center;
     border: 2px solid white;
-    /* box-shadow: -2px 5px 11px 13px rgba(0,0,0,0.75);
+     box-shadow: -2px 5px 11px 13px rgba(0,0,0,0.75);
 -webkit-box-shadow: -2px 5px 11px 13px rgba(0,0,0,0.75);
--moz-box-shadow: -2px 5px 11px 13px rgba(0,0,0,0.75); */
+-moz-box-shadow: -2px 5px 11px 13px rgba(0,0,0,0.75); 
+}
+
+.contenedorCardsMedico{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60%;
+}
+
+.bloqMedico{
+    width: 50%;
+    padding: 5%;
+}
+
+.btn{
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    
+}
+
+
+@media (min-width: 768px) {
+    .contenedorCardsMedico{
+        margin-bottom: 20%;
+    }
+    .bloqMedico {
+        width: 33.33%; /* O el ancho deseado para tablet */
+        padding: 3%; /* Ajuste el padding según lo necesario */
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        
+    }
+    .btn{
+        font-size: 20px;
+    }
+    .card-img-top{
+        height:15rem;
+        
+    }
+}
+
+@media (min-width: 1200px) {
+    .contenedorCardsMedico{
+        margin-bottom: 12%;
+    }
+    .bloqMedico {
+        width: 25%; /* O el ancho deseado para tablet */
+        padding:2%; /* Ajuste el padding según lo necesario */
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        
+    }
+    .btn{
+        font-size: 23px;
+    }
+    .card-img-top{
+        height:15rem;
+        
+    }
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto; /* Altura deseada para el footer */
+    background-color: #f5f5f5;
 }
