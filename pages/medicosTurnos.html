@@ -88,7 +88,7 @@
             </tbody>
         </table>
     </div>
-    <!-- Modal para la Historia Clínica -->
+
     <div class="modal fade" id="historiaClinicaModal" tabindex="-1" aria-labelledby="historiaClinicaModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -97,13 +97,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- Aquí puedes agregar campos para la historia clínica -->
+                    <!-- Campo de texto para la historia clínica -->
                     <label for="historiaClinicaTextArea">Ingrese la historia clínica:</label>
                     <textarea class="form-control" id="historiaClinicaTextArea" rows="4"></textarea>
                 </div>
                 <div class="modal-footer">
+                    <!-- Botones para cerrar y guardar -->
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" onclick="guardarHistoriaClinica()">Guardar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
                 </div>
             </div>
         </div>
@@ -144,8 +145,8 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
-    <script src="../app.js"></script>
     <script src="../js/medicosTurnos.js" type="module"></script>
+    <script src="../app.js"></script>
 </body>
 </html>
 
