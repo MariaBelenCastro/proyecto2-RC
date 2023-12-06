@@ -1,14 +1,8 @@
-*{
-    box-sizing: border-box;
-    margin: 0 auto;
-   
-}
-
-
-.container-fluid{
-    text-align: center;
-    
-
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .inputBuscar{
@@ -16,8 +10,33 @@
     color: black;
     
 }
-.bloqMedico{
+
+.contenedorCardsMedico{
     font-size: 20px;
     color: black; 
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    width: 100%;
+    gap: calc(8%/3);
+    row-gap: 1rem;
+}
+
+.card-img-top{
+    height:15rem;
     
+}
+
+.bloqMedico{
+    width: 23%;
+}
+
+.bloqMedico .card{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    /* box-shadow: -2px 5px 11px 13px rgba(0,0,0,0.75);
+-webkit-box-shadow: -2px 5px 11px 13px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 5px 11px 13px rgba(0,0,0,0.75); */
 }
