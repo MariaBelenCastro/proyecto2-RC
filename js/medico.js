@@ -1,6 +1,3 @@
-
-
-
 // Función para mostrar médicos según el filtro de búsqueda
 function mostrarMedicos(filtro) {
     let medicoGuardado = JSON.parse(localStorage.getItem('medico'));
@@ -13,7 +10,6 @@ function mostrarMedicos(filtro) {
     });
 
     let medicoInfoDiv = document.getElementById('medicoInfo');
-    medicoInfoDiv.innerHTML = '<h2>Listado de Especialistas:</h2>';
     resultados.forEach(medico => {
         let medicoDiv = document.createElement('div'); // Crear un nuevo div
     
@@ -22,14 +18,14 @@ function mostrarMedicos(filtro) {
     
         // Agregar el contenido al div creado
         medicoDiv.innerHTML = `
-        <div class="card" style="width: 18rem;">
-        <img src="/assets/imgcard.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Dr. ${medico.nombre} ${medico.apellido}</h5>
-          <p class="card-text">Especialidad: ${medico.especialidad}</p>
-          <a href="" class="btn btn-primary">Solicitar Turno</a>
+        <div class="card">
+          <img src="/assets/imgcard.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Dr. ${medico.nombre} ${medico.apellido}</h5>
+            <p class="card-text">Especialidad: ${medico.especialidad}</p>
+            <a href="" class="btn btn-primary">Solicitar Turno</a>
+          </div>
         </div>
-      </div>
         `;
     
         // Agregar el div creado al contenedor principal
