@@ -255,7 +255,6 @@ medicoPendiente = [
         email:'juanmendez@gmail.com',
         password:'Juanperez22',
         matricula:'25641',
-        loged:false,
         especialidad:'Pediatra',
         
     },
