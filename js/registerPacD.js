@@ -144,8 +144,9 @@ const iniciarSesionP = (event) => {
 //     }
 // };
 
-// function cerrarSesion() {
-//     localStorage.removeItem('medicoLogueado');
-// }
+function cerrarSesion() {
+   localStorage.removeItem('medicoLogueado');
+}
+
 
 

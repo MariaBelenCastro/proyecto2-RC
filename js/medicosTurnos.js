@@ -32,8 +32,40 @@ function cargarTabla(tablaId, tipoTurno) {
             fila.insertCell().innerText = turno.paciente;
             fila.insertCell().innerText = turno.dia;
             fila.insertCell().innerText = turno.horario;
+
+            // Agrega el botón de Historia Clínica
+            let celdaHistoriaClinica = fila.insertCell();
+            let btnHistoriaClinica = document.createElement('button');
+            btnHistoriaClinica.innerText = 'Historia Clínica';
+            btnHistoriaClinica.addEventListener('click', () => mostrarHistoriaClinica(turno.paciente, tipoTurno));
+            celdaHistoriaClinica.appendChild(btnHistoriaClinica);
         }
     });
+}
+
+function mostrarHistoriaClinica(paciente, tipoTurno) {
+    // Buscar el turno correspondiente al paciente en el array correspondiente
+    let pacienteTurno = tipoTurno === 'turno' ? turno.find(turno => turno.paciente === paciente) : turnoPendiente.find(turno => turno.paciente === paciente);
+
+    if (pacienteTurno && pacienteTurno.historiaClinica) {
+        // Extraer la información de la historia clínica
+        const historiaClinica = pacienteTurno.historiaClinica;
+
+        // Construir el mensaje para el alert
+        const mensajeAlert = `
+            Nombre: ${paciente}
+            Edad: ${historiaClinica.edad}
+            Fecha de Consulta: ${historiaClinica.fechaConsulta}
+            Diagnóstico: ${historiaClinica.diagnostico}
+            Tratamiento: ${historiaClinica.tratamiento}
+            Notas: ${historiaClinica.notas}
+        `;
+
+        // Mostrar el alert con la historia clínica
+        alert(mensajeAlert);
+    } else {
+        alert(`No se encontró la historia clínica para ${paciente}`);
+    }
 }
 
 window.onload = cargarTurnos;
