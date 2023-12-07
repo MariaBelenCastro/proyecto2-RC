@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+/* Estilos base */
+.containerAdmin {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .boxContentPaciente,
+.boxContentPacientePendiente,
+.boxContentMedico,
+.boxContentMedicoPendiente,
+.boxContentTurno,
+.boxContentTurnoPendiente {
+    box-sizing: border-box;
+    height: 200px;
+    border: 1px solid #000;
+} */
+
+
+@media (min-width: 768px) {
+    .boxContentPaciente,
+    .boxContentPacientePendiente,
+    .boxContentMedico,
+    .boxContentMedicoPendiente,
+    .boxContentTurno,
+    .boxContentTurnoPendiente {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .boxContentPaciente,
+    .boxContentPacientePendiente,
+    .boxContentMedico,
+    .boxContentMedicoPendiente,
+    .boxContentTurno,
+    .boxContentTurnoPendiente {
+        width: 100%;
+    }
+}
+
+.pacienteDivClass,
+.pacientePendiente,
+.medicoDivClass,
+.medicoPendiente{
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.h1Div{
+    text-align: center;
+    font-size: 40px;
+}
+
+.containerAdmin{
+    background: url(/assets/fondobody.jpg);
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+
+button{
+    width:40%;
+    opacity: 0.8;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+}

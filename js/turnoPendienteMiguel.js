@@ -103,11 +103,11 @@ function buscarPaciente() {
                     consulta: selectedMedico.especialidad // Consulta igual a la especialidad del medico
                 };
     
-                let turnosPendientes = JSON.parse(localStorage.getItem('turnosPendientes')) || [];
-                turnosPendientes.push(nuevoTurno);
+                let turnoPendiente= JSON.parse(localStorage.getItem('turnoPendiente')) || [];
+                turnoPendiente.push(nuevoTurno);
     
                 // Guardar todos los turnos pendientes en el localStorage
-                localStorage.setItem('turnosPendientes', JSON.stringify(turnosPendientes));
+                localStorage.setItem('turnoPendiente', JSON.stringify(turnoPendiente));
                 alert('Consulta enviada correctamente.');
             } else {
                 alert('No se encontró ningún paciente con ese DNI.');
