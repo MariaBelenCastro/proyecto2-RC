@@ -37,6 +37,7 @@ function cargarTabla(tablaId, tipoTurno) {
             let celdaHistoriaClinica = fila.insertCell();
             let btnHistoriaClinica = document.createElement('button');
             btnHistoriaClinica.innerText = 'Historia Clínica';
+            btnHistoriaClinica.classList.add('btn', 'btn-primary');
             btnHistoriaClinica.addEventListener('click', () => mostrarHistoriaClinica(turno.paciente, tipoTurno));
             celdaHistoriaClinica.appendChild(btnHistoriaClinica);
         }
