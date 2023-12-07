@@ -54,40 +54,38 @@
     </nav>
 
     <div class="container tabla-medico">
-        <h2>Turnos Médicos</h2>
-        <table class="table table-bordered border-primary" id="turnos-table">
-            <thead>
-                <tr>
-                    <th>Paciente</th>
-                    <th>Especialista</th>
-                    <th>Horario</th>
-                    <th>Consulta</th>
-                    <th>Día</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Los turnos se cargarán aquí -->
-            </tbody>
-        </table>
-    </div>
-    <div class="container tabla-medico">
-        <h2>Turnos Aprobados</h2>
-        <table class="table table-bordered border-primary" id="turnos-aprobados-table">
+        <h2>Turnos Pendientes</h2>
+        <table class="table table-bordered text-center border-primary" id="turnos-pendientes-table">
             <thead>
                 <tr>
                     <th>N°</th>
-                    <th>Paciente</th>
-                    <th>Horario</th>
-                    <th>Consulta</th>
+                    <th>Nombre del Paciente</th>
                     <th>Día</th>
+                    <th>Horario</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Los turnos aprobados se cargarán aquí -->
+                
             </tbody>
         </table>
     </div>
+    
+    <div class="container tabla-medico">
+        <h2>Turnos Aprobados</h2>
+        <table class="table table-bordered text-center border-primary" id="turnos-aprobados-table">
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Nombre del Paciente</th>
+                    <th>Día</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </div>
+    
 
     <div class="modal fade" id="historiaClinicaModal" tabindex="-1" aria-labelledby="historiaClinicaModalLabel" aria-hidden="true">
         <div class="modal-dialog">

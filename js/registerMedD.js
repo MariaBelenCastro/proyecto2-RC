@@ -135,14 +135,8 @@ const iniciarSesion = (event) => {
         localStorage.setItem('medicoLogueado', JSON.stringify(user));
         function verificarSesion() {
         const medicoLogueado = JSON.parse(localStorage.getItem('medicoLogueado'));
-    // if (medicoLogueado) {
-
-    // } else {
-        
-    // }
-}
-
-verificarSesion();
+    }
+    verificarSesion();
         window.location.href = "/pages/medicosTurnos.html";
     } else {
         // Usuario no encontrado, mostrar mensaje de error
