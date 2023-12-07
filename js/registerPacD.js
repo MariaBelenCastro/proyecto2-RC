@@ -127,7 +127,7 @@ const iniciarSesionP = (event) => {
         if (user.isAdmin) {
             console.log("Redirigiendo a administradores");
             localStorage.setItem('pacienteLogueadoAdmin', JSON.stringify(user));
-            window.location.href = "/pages/administradores.html";
+            window.location.href = "/pages/administrador.html";
         } else {
             console.log("Redirigiendo a médicos");
             localStorage.setItem('pacienteLogueado', JSON.stringify(user));
