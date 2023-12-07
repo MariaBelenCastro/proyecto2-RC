@@ -1,23 +1,35 @@
 turno = [
     { 
-        paciente:'Jose Velazquez',
-        especialista:'Mendez',
+        paciente: 'Jose Velazquez',
+        especialista: 'Mendez',
         dniMedico: '41291322',
-        horario:'12:30',
-        email:'pepe@olis.com',
-        consulta:'Pediatra',
-        dia:'miercoles',
-        horario:'09:00am'
+        horario: '12:30',
+        email: 'pepe@olis.com',
+        consulta: 'Pediatra',
+        dia: 'miercoles',
+        historiaClinica: {
+            edad: 6,
+            fechaConsulta: '2023-12-07',
+            diagnostico: 'Fiebre leve',
+            tratamiento: 'Reposo y medicamentos para bajar la fiebre',
+            notas: 'Se recomienda seguimiento en tres días. Monitorear temperatura regularmente.'
+        }
     },
     {
         paciente: 'Ana Gonzalez',
-        especialista:'Mendez',
+        especialista: 'Mendez',
         dniMedico: '41291322',
         horario: '14:00',
         email: 'ana@gmail.com',
         consulta: 'Pediatra',
         dia: 'lunes',
-        horario: '13:00pm'
+        historiaClinica: {
+            edad: 8,
+            fechaConsulta: '2023-12-07',
+            diagnostico: 'Resfriado común',
+            tratamiento: 'Reposo, líquidos y medicamentos para aliviar la congestión nasal',
+            notas: 'Se recomienda seguimiento en una semana. Informar cualquier empeoramiento de los síntomas.'
+        }
     },
     {
         paciente: 'Luis Lopez',
@@ -27,7 +39,13 @@ turno = [
         email: 'luis@gmail.com',
         consulta: 'Cardiologo',
         dia: 'miercoles',
-        horario: '16:00pm'
+        historiaClinica: {
+            edad: 12,
+            fechaConsulta: '2023-12-07',
+            diagnostico: 'Control cardiológico anual',
+            tratamiento: 'Sin tratamiento actual, seguir monitoreo regular.',
+            notas: 'Buen estado de salud general.'
+        }
     },
     {
         paciente: 'Marta Aguirre',
@@ -37,7 +55,13 @@ turno = [
         email: 'marta@gmail.com',
         consulta: 'Cardiologo',
         dia: 'viernes',
-        horario: '19:00pm'
+        historiaClinica: {
+            edad: 40,
+            fechaConsulta: '2023-12-07',
+            diagnostico: 'Control cardiológico anual',
+            tratamiento: 'Sin tratamiento actual, seguir monitoreo regular.',
+            notas: 'Buen estado de salud general.'
+        }
     },
     {
         paciente: 'Carlos Moras',
@@ -46,52 +70,83 @@ turno = [
         email: 'carlos@gmail.com',
         consulta: 'Oncologo',
         dia: 'martes',
-        horario: '11:00am'
+        historiaClinica: {
+            edad: 55,
+            fechaConsulta: '2023-12-07',
+            diagnostico: 'Seguimiento oncológico',
+            tratamiento: 'Radioterapia programada',
+            notas: 'El paciente muestra una buena respuesta al tratamiento.'
+        }
     },
     {
         paciente: 'Laura Villagra',
-        especialista:'Mendez',
+        especialista: 'Mendez',
         dniMedico: '41291322',
         horario: '16:45',
         email: 'laura@gmail.com',
         consulta: 'Pediatra',
         dia: 'jueves',
-        horario: '15:00pm'
+        historiaClinica: {
+            edad: 10,
+            fechaConsulta: '2023-12-07',
+            diagnostico: 'Examen pediátrico de rutina',
+            tratamiento: 'Sin tratamiento actual, seguir monitoreo regular.',
+            notas: 'Buen estado de salud general.'
+        }
     }
-]
+];
 
 turnoPendiente = [
     { 
-        paciente:'Jose',
-        especialista:'Mendez',
+        paciente: 'Jose',
+        especialista: 'Mendez',
         dniMedico: '41291322',
-        horario:'12:30',
-        email:'pepe@olis',
-        consulta:'Pediatra',
-        dia:'Lunes',
-        horario:'15:00am'
+        horario: '12:30',
+        email: 'pepe@olis',
+        consulta: 'Pediatra',
+        dia: 'Lunes',
+        historiaClinica: {
+            edad: 7,
+            fechaConsulta: '2023-12-07',
+            diagnostico: 'Control pediátrico anual',
+            tratamiento: 'Sin tratamiento actual, seguir monitoreo regular.',
+            notas: 'Buen estado de salud general.'
+        }
     },
-    {   paciente:'Jospepee',
-        especialista:'Mendez Juan',
+    {
+        paciente: 'Jospepee',
+        especialista: 'Mendez Juan',
         dniMedico: '35642589',
-        horario:'12:30',
-        email:'pepe@olis',
-        consulta:'Oncologo',
-        dia:'Lunes',
-        horario:'09:00am'
+        horario: '12:30',
+        email: 'pepe@olis',
+        consulta: 'Oncologo',
+        dia: 'Lunes',
+        historiaClinica: {
+            edad: 45,
+            fechaConsulta: '2023-12-07',
+            diagnostico: 'Seguimiento oncológico',
+            tratamiento: 'Radioterapia programada',
+            notas: 'El paciente muestra una buena respuesta al tratamiento.'
+        }
     },
-    {   paciente:'Maria',
-        especialista:'Mendez',
+    {
+        paciente: 'Maria',
+        especialista: 'Mendez',
         dniMedico: '41291322',
-        horario:'12:30',
-        email:'mariamendez@gmail.com',
-        consulta:'Kinesiologo',
-        dia:'Lunes',
-        horario:'09:00am'
+        horario: '12:30',
+        email: 'mariamendez@gmail.com',
+        consulta: 'Kinesiologo',
+        dia: 'Lunes',
+        historiaClinica: {
+            edad: 28,
+            fechaConsulta: '2023-12-07',
+            diagnostico: 'Rehabilitación física',
+            tratamiento: 'Ejercicios y terapia física',
+            notas: 'Se observa mejoría en la movilidad y fuerza muscular.'
+        }
     }
+];
 
-    
-]
 
 
 

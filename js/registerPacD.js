@@ -130,7 +130,6 @@ const iniciarSesionP = (event) => {
             window.location.href = "/pages/administrador.html";
         } else {
             console.log("Redirigiendo a médicos");
-            localStorage.setItem('pacienteLogueado', JSON.stringify(user));
             window.location.href = "/pages/medicos.html";
         }
     } else {
@@ -145,8 +144,9 @@ const iniciarSesionP = (event) => {
 //     }
 // };
 
-// function cerrarSesion() {
-//     localStorage.removeItem('medicoLogueado');
-// }
+function cerrarSesion() {
+   localStorage.removeItem('medicoLogueado');
+}
+
 
 
