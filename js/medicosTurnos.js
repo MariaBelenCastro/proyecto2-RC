@@ -43,11 +43,11 @@ function userAction() {
     if (medicoLogueado) {
         cerrarSesion();
     } else {
-        window.location.href = "index.html";
+        window.location.href = "/pages/index.html";
     }
 }
 
 function cerrarSesion() {
     localStorage.removeItem('medicoLogueado');
-    window.location.href = "index.html";
+    window.location.href = "/pages/index.html";
 }

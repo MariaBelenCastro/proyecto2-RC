@@ -130,6 +130,7 @@ const iniciarSesionP = (event) => {
             window.location.href = "/pages/administradores.html";
         } else {
             console.log("Redirigiendo a médicos");
+            localStorage.setItem('pacienteLogueado', JSON.stringify(user));
             window.location.href = "/pages/medicos.html";
         }
     } else {
