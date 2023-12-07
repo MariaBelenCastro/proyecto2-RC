@@ -384,7 +384,7 @@ paciente =[
          apellido:'yeins',
          email:'peptssio@23123.com',
          password:'34124a12asd',
-         dni:12341234,
+         dni:'12341234',
          isAdmin: false,
      },
      {
@@ -392,7 +392,7 @@ paciente =[
          apellido:'Martinez',
          email:'pept22io@23123.com',
          password:'34124aasd',
-         dni:12341234,
+         dni:'12341234',
          isAdmin: false,
      },
      {
