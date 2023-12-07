@@ -26,6 +26,8 @@ function mostrarMedicos(filtro) {
         <div class="card-body">
           <h5 class="card-title">Dr. ${medico.nombre} ${medico.apellido}</h5>
           <p class="card-text">${medico.especialidad}</p>
+          <p class="card-text">Dia de atencion ${medico.dia}</p>
+          <p class="card-text">Horario de atencion ${medico.horario}</p>
           <a href="/pages/turnoPendienteMiguel.html" style="text-align: center;" class="btn btn-primary">Solicitar Turno</a>
         </div>
       </div>
