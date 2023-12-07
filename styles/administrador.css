@@ -48,7 +48,7 @@
 .medicoDivClass,
 .medicoPendiente{
     border: 1px solid white;
-    padding: 10px;
+    padding: 20px;
     font-size: 20px;
     box-shadow: 1px -2px 53px 23px rgba(0,0,0,0.75);
 -webkit-box-shadow: 1px -2px 53px 23px rgba(0,0,0,0.75);

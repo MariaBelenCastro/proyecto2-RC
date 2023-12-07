@@ -86,26 +86,53 @@ if (valoresMedicoPendiente) {
   const medicosPendientes = JSON.parse(valoresMedicoPendiente);
 
   const mostrarMedicosPendientes = () => {
-    // Crear un fragmento para concatenar los valores deseados
     const fragmento = document.createDocumentFragment();
     const h1Div = document.createElement('h1');
     h1Div.classList.add('h1Div');
-    h1Div.textContent = 'médicos pendientes';
+    h1Div.textContent = 'Médicos pendientes';
     fragmento.appendChild(h1Div);
-
+  
     medicosPendientes.forEach((medicoPendiente, index) => {
       const medicoPendienteDiv = document.createElement('div');
-      medicoPendienteDiv.classList.add('medicoPendiente'); // Agregar la clase 'medico-pendiente-item'
-
-      // Mostrar datos del médico pendiente
+      medicoPendienteDiv.classList.add('medicoPendiente');
+  
       const datosMedicoPendienteDiv = document.createElement('div');
       datosMedicoPendienteDiv.textContent = `Nombre: ${medicoPendiente.nombre}, Apellido: ${medicoPendiente.apellido}, Email: ${medicoPendiente.email}, DNI: ${medicoPendiente.dni}`;
       medicoPendienteDiv.appendChild(datosMedicoPendienteDiv);
-
+  
+      // Botón de Eliminar médico pendiente
+      const btnEliminarPendiente = document.createElement('button');
+      btnEliminarPendiente.textContent = 'Eliminar Pendiente';
+      btnEliminarPendiente.addEventListener('click', () => {
+        // Eliminar médico pendiente del array y actualizar localStorage
+        medicosPendientes.splice(index, 1);
+        localStorage.setItem('medicoPendiente', JSON.stringify(medicosPendientes));
+        mostrarMedicosPendientes(); // Volver a mostrar la lista actualizada
+      });
+      medicoPendienteDiv.appendChild(btnEliminarPendiente);
+  
+      // Botón de Aceptar médico pendiente
+      
+      const btnAceptarPendiente = document.createElement('button');
+      btnAceptarPendiente.textContent = 'Aceptar Pendiente';
+      btnAceptarPendiente.addEventListener('click', () => {
+        const nuevoMedico = { ...medicoPendiente, key: Date.now() }; // Nueva clave única
+        medicos.push(nuevoMedico); // Agregar médico pendiente a la lista de médicos
+  
+        // Eliminar médico pendiente del array de médicos pendientes y actualizar localStorage
+        medicosPendientes.splice(index, 1);
+        localStorage.setItem('medicoPendiente', JSON.stringify(medicosPendientes));
+  
+        localStorage.setItem('medico', JSON.stringify(medicos)); // Actualizar lista de médicos
+  
+        mostrarMedicos(); // Mostrar médicos actualizados
+        mostrarMedicosPendientes(); // Mostrar médicos pendientes actualizados
+      });
+      medicoPendienteDiv.appendChild(btnAceptarPendiente);
+  
       fragmento.appendChild(medicoPendienteDiv);
     });
-
-    // Limpiar el contenido actual del div y agregar el fragmento con los valores
+  
     boxContentMedicoPendiente.innerHTML = '';
     boxContentMedicoPendiente.appendChild(fragmento);
   };

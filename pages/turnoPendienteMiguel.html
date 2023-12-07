@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/turnoPendiente.css">
     <script defer src="/js/turnoPendienteMiguel.js"></script>
     <title>Document</title>
 </head>
@@ -14,7 +15,9 @@
     <title>Selección de Médicos</title>
 </head>
 <body>
-    <h1>Seleccione un médico:</h1>
+    <div class="container-fluid">
+        <a href="/pages/index.html"><img class="img-log" src="/assets/logo.png" alt=""></a>
+        <h1>Seleccione un médico:</h1>
     <select id="medicoSelect">
         <!-- Opciones de médicos se agregarán aquí -->
     </select>
@@ -25,13 +28,15 @@
     </select>
 
     <h2>Seleccione un horario:</h2>
-    <select id="horarioSelect">
+    <select id="horarioSelect" >
         <!-- Opciones de horarios se agregarán aquí -->
     </select>
     <br>
     
     <label for="dniInput">Ingrese DNI:</label>
-    <input type="text" id="dniInput">
+    <br>
+    <input type="text" id="dniInput" placeholder="numero de documento">
+    <br>
     <button onclick="buscarPaciente()">Buscar</button>
 
     <div>
@@ -43,6 +48,8 @@
     </div>
     <button onclick="enviarConsulta()">Enviar Consulta</button>
    
+    </div>
+    
 </body>
 </html>
 
