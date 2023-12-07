@@ -7,7 +7,7 @@ function loadPacientesPendientes() {
 }
 
 function displayPatients() {
-  const dataList = document.getElementById('data-list');
+  const dataList = document.getElementById('boxContentmedicoPendiente');
   dataList.innerHTML = '';
 
   pacientePendiente.forEach((patient, index) => {
@@ -29,12 +29,15 @@ function displayPatients() {
 }
 
 function addToPatients(patient, index) {
-  const paciente = JSON.parse(localStorage.getItem('medico')) || [];
-  paciente.push(patient);
-  localStorage.setItem('medico', JSON.stringify(paciente));
+  const medico = JSON.parse(localStorage.getItem('medico')) || [];
+  medico.push(patient);
+  localStorage.setItem('medico', JSON.stringify(medico)); // Guardar en la llave 'medico' en lugar de 'medicoPendiente'
+
   pacientePendiente.splice(index, 1);
+  localStorage.setItem('medicoPendiente', JSON.stringify(pacientePendiente)); // Actualizar 'medicoPendiente' en localStorage
   displayPatients();
 }
+
 
 function removeFromPending(index) {
   pacientePendiente.splice(index, 1);

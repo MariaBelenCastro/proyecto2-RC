@@ -72,13 +72,19 @@ body{
     .equipoM{
         width: 100%;
     }
+    .textoImagenC{
+        margin-top:10%;
+    }
+
+
     
 }
-@media (min-width: 576px) {  
+@media (max-width: 576px) {  
     .equipoM{
         width: 100%;
     }
     
+
 }
 
 
@@ -87,7 +93,7 @@ body{
         width: 80%;
         
     }
-
+   
 }
 
 
@@ -115,4 +121,9 @@ body{
         
     } 
     
+}
+
+.aNosotros{
+    color: white;
+    font-size: 20px;
 }
