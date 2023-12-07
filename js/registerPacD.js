@@ -60,10 +60,6 @@ function registrarse(event) {
     alertify.warning(`Su registro se está procesando. La aprobación será enviada a ${correo}`)
     localStorage.setItem("pacientePendiente", JSON.stringify(arrayLS));
     form.reset();
-
-    // dnisRegistro.add(dni);
-    // localStorage.setItem("dnisRegistro", JSON.stringify(Array.from(dnisRegistro)));
-    // localStorage.setItem("correoRegistro", JSON.stringify(Array.from(correoRegistro)));
 }
 
 function mostrarContraseña(passwordId, eyeId) {
@@ -119,53 +115,37 @@ const recibirInputs = () => {
     return true;
 }
 
-// const iniciarSesion = (event) => {
-//     event.preventDefault();
-//     const emailLog = document.getElementById("email2").value;
-//     const passwordLog = document.getElementById("password2").value;
-//     const user = paciente.find((item) => item.email === emailLog && item.password === passwordLog);
-//     if (user) {
-//         // window.location.href = "medico.html"; agregar la direccion de turnos pacientes
-//         if(user.isAdmin) {
-//             window.location.href='administracion.html'
-//         }
-//         else{
-//             window.location.href="127.0.0.1:5501/index.html"
-//         }
+
+const iniciarSesionP = (event) => {
+    event.preventDefault();
+    const emailLog = document.getElementById("email3").value;
+    const passwordLog = document.getElementById("password3").value; 
+
+    const user = paciente.find((item) => item.email === emailLog && item.password === passwordLog);
+    // console.log(user.isAdmin)
+    if (user) {
+        if (user.isAdmin) {
+            console.log("Redirigiendo a administradores");
+            localStorage.setItem('pacienteLogueadoAdmin', JSON.stringify(user));
+            window.location.href = "/pages/administradores.html";
+        } else {
+            console.log("Redirigiendo a médicos");
+            window.location.href = "/pages/medicos.html";
+        }
+    } else {
+        alertify.error("El usuario o la contraseña ingresada no son correctos");
+    }
+};
+// verificarSesion();
+//         window.location.href = "/pages/medicosTurnos.html";
 //     } else {
 //         // Usuario no encontrado, mostrar mensaje de error
 //         alertify.error("El usuario o la contraseña ingresada no son correctos");
 //     }
 // };
 
-const iniciarSesion = (event) => {
-    event.preventDefault();
-    const emailLog = document.getElementById("email2").value;
-    const passwordLog = document.getElementById("password2").value; 
-    console.log(passwordLog)
-    const user = paciente.find((item) => item.email === emailLog && item.password === passwordLog);
-    if (user) {
-        localStorage.setItem('pacienteLogueado', JSON.stringify(user));
-        function verificarSesion() {
-        const pacienteLogueado = JSON.parse(localStorage.getItem('pacienteLogueado'));
-    // if (pacienteLogueado) {
-
-    // } else {
-        
-    // }
-}
-
-verificarSesion();
-        window.location.href = "/pages/medicosTurnos.html";
-    } else {
-        // Usuario no encontrado, mostrar mensaje de error
-        alertify.error("El usuario o la contraseña ingresada no son correctos");
-    }
-};
-
-function cerrarSesion() {
-    localStorage.removeItem('medicoLogueado');
-
-}
+// function cerrarSesion() {
+//     localStorage.removeItem('medicoLogueado');
+// }
 
 

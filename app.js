@@ -1,34 +1,99 @@
 turno = [
     { 
-        paciente:'Jose',
+        paciente:'Jose Velazquez',
         especialista:'Mendez',
+        dniMedico: '41291322',
         horario:'12:30',
-        email:'pepe@olis',
+        email:'pepe@olis.com',
         consulta:'Pediatra',
         dia:'miercoles',
         horario:'09:00am'
     },
+    {
+        paciente: 'Ana Gonzalez',
+        especialista:'Mendez',
+        dniMedico: '41291322',
+        horario: '14:00',
+        email: 'ana@gmail.com',
+        consulta: 'Pediatra',
+        dia: 'lunes',
+        horario: '13:00pm'
+    },
+    {
+        paciente: 'Luis Lopez',
+        especialista: 'Fernandez',
+        dniMedico: '78901234',
+        horario: '15:30',
+        email: 'luis@gmail.com',
+        consulta: 'Cardiologo',
+        dia: 'miercoles',
+        horario: '16:00pm'
+    },
+    {
+        paciente: 'Marta Aguirre',
+        especialista: 'Fernandez',
+        dniMedico: '78901234',
+        horario: '10:45',
+        email: 'marta@gmail.com',
+        consulta: 'Cardiologo',
+        dia: 'viernes',
+        horario: '19:00pm'
+    },
+    {
+        paciente: 'Carlos Moras',
+        especialista: 'Ramirez',
+        horario: '11:15',
+        email: 'carlos@gmail.com',
+        consulta: 'Oncologo',
+        dia: 'martes',
+        horario: '11:00am'
+    },
+    {
+        paciente: 'Laura Villagra',
+        especialista:'Mendez',
+        dniMedico: '41291322',
+        horario: '16:45',
+        email: 'laura@gmail.com',
+        consulta: 'Pediatra',
+        dia: 'jueves',
+        horario: '15:00pm'
+    }
 ]
 
 turnoPendiente = [
     { 
         paciente:'Jose',
         especialista:'Mendez',
+        dniMedico: '41291322',
         horario:'12:30',
         email:'pepe@olis',
         consulta:'Pediatra',
         dia:'Lunes',
-        horario:'09:00am'
+        horario:'15:00am'
     },
     {   paciente:'Jospepee',
         especialista:'Mendez Juan',
+        dniMedico: '35642589',
         horario:'12:30',
         email:'pepe@olis',
+        consulta:'Oncologo',
+        dia:'Lunes',
+        horario:'09:00am'
+    },
+    {   paciente:'Maria',
+        especialista:'Mendez',
+        dniMedico: '41291322',
+        horario:'12:30',
+        email:'mariamendez@gmail.com',
         consulta:'Kinesiologo',
         dia:'Lunes',
         horario:'09:00am'
     }
+
+    
 ]
+
+
 
 medico = [
     { 
@@ -37,14 +102,14 @@ medico = [
         dni: '41291322',
         email:'juanmendez@gmail.com',
         password:'Juanperez123',
-        matricula:'12412',
+        matricula:'124125',
         especialidad:'Pediatra',
         horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
         dia:['Lunes','Miercoles','Viernes']
     },
     {
         nombre:'Miguel',
-        apellido:'Medina Jodar',
+        apellido:'Medina',
         dni: '35642589',
         email:'miguelmedina@gmail.com',
         password:'Miguel1234',
@@ -54,75 +119,107 @@ medico = [
         dia:['sabado','domingo','Viernes']
     },
     {
-        nombre:'Gabriel Jose',
-        apellido:'Lopez Gonzalez',
+        nombre:'Gabriel',
+        apellido:'Lopez',
         dni: '12543422',
         email:'Gabriellopez@hotmail.com',
         password:'Gabriell1234',
         matricula:'12412',
-        especialidad:'Traumatologo',
+        especialidad:'Oncologo',
         horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
         dia:['Lunes','Jueves','Miercoles']
     },
-    { 
-        nombre:'Juan Jose',
-        apellido:'Mendez',
-        dni: '41291322',
-        email:'juanmendez@gmail.com',
-        password:'Juanperez123',
-        matricula:'12412',
-        especialidad:'Neurologo',
-        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
-        dia:['Lunes','Miercoles','Viernes']
+    {
+        nombre: 'Ana',
+        apellido: 'Fernandez',
+        dni: '78901234',
+        email: 'anafernandez@gmail.com',
+        password: 'Ana1234',
+        matricula: '56789',
+        especialidad: 'Cardiologo',
+        horario: ['08:00am', '12:00pm', '15:00pm', '18:00pm'],
+        dia: ['Martes', 'Jueves', 'Sabado']
     },
-    { 
-        nombre:'Chespirito Diego',
-        apellido:'Di Salvador',
-        dni: '41291322',
-        email:'juanmendez@gmail.com',
-        password:'Juanperez123',
-        matricula:'12412',
-        especialidad:'Traumatologo',
-        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
-        dia:['Lunes','Miercoles','Viernes']
+    {
+        nombre: 'Luis',
+        apellido: 'Martinez',
+        dni: '56789012',
+        email: 'luismartinez@gmail.com',
+        password: 'Luis5678',
+        matricula: '98765',
+        especialidad: 'Dermatologo',
+        horario: ['10:00am', '14:00pm', '17:00pm', '20:00pm'],
+        dia: ['Lunes', 'Miercoles', 'Viernes']
     },
-    { 
-        nombre:'Chespirito Diego',
-        apellido:'Di Salvador',
-        dni: '41291322',
-        email:'juanmendez@gmail.com',
-        password:'Juanperez123',
-        matricula:'12412',
-        especialidad:'Traumatologo',
-        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
-        dia:['Lunes','Miercoles','Viernes']
+    {
+        nombre: 'Maria',
+        apellido: 'Rodriguez',
+        dni: '34567890',
+        email: 'mariarodriguez@gmail.com',
+        password: 'Maria7890',
+        matricula: '12345',
+        especialidad: 'Gastroenterologo',
+        horario: ['11:00am', '15:00pm', '18:00pm', '21:00pm'],
+        dia: ['Martes', 'Jueves', 'Sabado']
     },
-    { 
-        nombre:'Chespirito Diego',
-        apellido:'Di Salvador',
-        dni: '41291322',
-        email:'juanmendez@gmail.com',
-        password:'Juanperez123',
-        matricula:'12412',
-        especialidad:'Traumatologo',
-        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
-        dia:['Lunes','Miercoles','Viernes']
+    {
+        nombre: 'Carlos',
+        apellido: 'Gomez',
+        dni: '12345678',
+        email: 'carlosgomez@gmail.com',
+        password: 'Carlos5678',
+        matricula: '54321',
+        especialidad: 'Neurologo',
+        horario: ['08:00am', '12:00pm', '15:00pm', '18:00pm'],
+        dia: ['Lunes', 'Miercoles', 'Viernes']
     },
-    { 
-        nombre:'Chespirito Diego',
-        apellido:'Di Salvador',
-        dni: '41291322',
-        email:'juanmendez@gmail.com',
-        password:'Juanperez123',
-        matricula:'12412',
-        especialidad:'Traumatologo',
-        horario:['09:00am', '13:00pm', '16:00pm', '19:00pm'],
-        dia:['Lunes','Miercoles','Viernes']
+    {
+        nombre: 'Laura',
+        apellido: 'Hernandez',
+        dni: '87654321',
+        email: 'laurahernandez@gmail.com',
+        password: 'Laura1234',
+        matricula: '98765',
+        especialidad: 'Pediatra',
+        horario: ['10:00am', '14:00pm', '17:00pm', '20:00pm'],
+        dia: ['Martes', 'Jueves', 'Sabado']
+    },
+    {
+        nombre: 'Javier',
+        apellido: 'Diaz',
+        dni: '56781234',
+        email: 'javierdiaz@gmail.com',
+        password: 'Javier5678',
+        matricula: '43210',
+        especialidad: 'Oncologo',
+        horario: ['11:00am', '15:00pm', '18:00pm', '21:00pm'],
+        dia: ['Lunes', 'Miercoles', 'Viernes']
+    },
+    {
+        nombre: 'Silvia',
+        apellido: 'Torres',
+        dni: '87654312',
+        email: 'silviatorres@gmail.com',
+        password: 'Silvia1234',
+        matricula: '54321',
+        especialidad: 'Cardiologo',
+        horario: ['08:00am', '12:00pm', '15:00pm', '18:00pm'],
+        dia: ['Martes', 'Jueves', 'Sabado']
+    },
+    {
+        nombre: 'Ricardo',
+        apellido: 'Ramirez',
+        dni: '12348765',
+        email: 'ricardoramirez@gmail.com',
+        password: 'Ricardo5678',
+        matricula: '87654',
+        especialidad: 'Dermatologo',
+        horario: ['10:00am', '14:00pm', '17:00pm', '20:00pm'],
+        dia: ['Lunes', 'Miercoles', 'Viernes']
     }
-    
-  ];
+];
 
-  pacientePendiente =[
+pacientePendiente =[
     {
         nombre:'Ramiro',
         apellido:'Jodar',
@@ -157,6 +254,34 @@ medico = [
         email:'Augusto1@hotmail.com',
         password:'Augusto1234',
         dni:'27895645'
+    },
+    {
+        nombre: 'Carlos',
+        apellido: 'Martinez',
+        email: 'carlosmartinez@gmail.com',
+        password: 'Carlos1234',
+        dni: '12345678'
+    },
+    {
+        nombre: 'Laura',
+        apellido: 'Diaz',
+        email: 'lauradiaz@gmail.com',
+        password: 'Laura5678',
+        dni: '87654321'
+    },
+    {
+        nombre: 'Sofia',
+        apellido: 'Ramirez',
+        email: 'sofiaramirez@gmail.com',
+        password: 'Sofia5678',
+        dni: '98765432'
+    },
+    {
+        nombre: 'Javier',
+        apellido: 'Lopez',
+        email: 'javierlopez@gmail.com',
+        password: 'Javier5678',
+        dni: '56789012'
     }
   ] 
 
@@ -168,9 +293,7 @@ medicoPendiente = [
         email:'juanmendez@gmail.com',
         password:'Juanperez22',
         matricula:'25641',
-        loged:false,
-        especialidad:'Pediatra',
-        
+        especialidad:'Pediatra',  
     },
     {
         nombre:'Ramiro',
@@ -179,9 +302,7 @@ medicoPendiente = [
         email:'ramirocorrea@hotmail.com',
         password:'Ramiro1234',
         matricula:'34541',
-        isAdmin:false,
-        especialidad:'Oncologo',
-        
+        especialidad:'Oncologo',   
     },
     {
         nombre:'Ramon',
@@ -190,21 +311,18 @@ medicoPendiente = [
         email:'pepe@gmail.com',
         password:'12343asd',
         matricula:'12412',
-        isAdmin:false,
         especialidad:'Oncologo',
-        
-    }
-    
-  ];
+    }  
+];
 
 paciente =[
     {
-         nombre:'pepito augusto',
-         apellido:'Jodar',
-         email:'peptio@23123.com',
-         password:'34124aasd',
-         dni:'1235',
-         loged:false
+         nombre:'Miguel',
+         apellido:'Guzman',
+         email:'miguelguzman@gmail.com',
+         password:'Miguel123',
+         dni:'12355441',
+         isAdmin: true
      },
      {
          nombre:'pepito 2',
@@ -212,7 +330,7 @@ paciente =[
          email:'peptssio@23123.com',
          password:'34124a12asd',
          dni:12341234,
-         loged:false
+         isAdmin: false,
      },
      {
          nombre:'pepito ',
@@ -220,7 +338,7 @@ paciente =[
          email:'pept22io@23123.com',
          password:'34124aasd',
          dni:12341234,
-         loged:false
+         isAdmin: false,
      },
      {
          nombre:'Gustavo',
@@ -228,7 +346,7 @@ paciente =[
          email:'peptd22io@23123.com',
          password:'34124aasd',
          dni: '29445174',
-         loged:false
+         isAdmin: false,
      },
      {
          nombre:'Augusto',
@@ -236,9 +354,49 @@ paciente =[
          email:'peptio@23123.com',
          password:'34124aasd',
          dni: '36412698',
-         loged:false
-     }
-   ]
+         isAdmin: false,
+     },
+     {
+        nombre: 'Laura',
+        apellido: 'Martinez',
+        email: 'lauramartinez@gmail.com',
+        password: 'Laura1234',
+        dni: '56789012',
+        isAdmin: false,
+    },
+    {
+        nombre: 'Carlos',
+        apellido: 'Gomez',
+        email: 'carlosgomez@gmail.com',
+        password: 'Carlos5678',
+        dni: '98765432',
+        isAdmin: false,
+    },
+    {
+        nombre: 'Sofia',
+        apellido: 'Ramirez',
+        email: 'sofiaramirez@gmail.com',
+        password: 'Sofia1234',
+        dni: '34567890',
+        isAdmin: false,
+    },
+    {
+        nombre: 'Javier',
+        apellido: 'Diaz',
+        email: 'javierdiaz@gmail.com',
+        password: 'Javier5678',
+        dni: '87654321',
+        isAdmin: false,
+    },
+    {
+        nombre: 'Maria',
+        apellido: 'Fernandez',
+        email: 'mariafernandez@gmail.com',
+        password: 'Maria1234',
+        dni: '23456789',
+        isAdmin: false,
+    }
+];
 
 
  function cargarObjetos() {
